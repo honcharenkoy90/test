@@ -1,0 +1,36 @@
+unit diagram_unit;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, TeeGDIPlus, TeEngine, TeeProcs, Chart, DBChart, ExtCtrls, Series;
+
+type
+  Tdiagram_form = class(TForm)
+    Panel1: TPanel;
+    DBChart1: TDBChart;
+    Series2: TBarSeries;
+    Series1: TBarSeries;
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  diagram_form: Tdiagram_form;
+
+implementation
+
+{$R *.dfm}
+uses connection_unit, tndata_unit;
+
+procedure Tdiagram_form.FormShow(Sender: TObject);
+begin
+DBChart1.Series[0].Active:=true;
+DBChart1.Series[1].Active:=false;
+end;
+
+end.

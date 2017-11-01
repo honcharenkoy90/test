@@ -1,0 +1,49 @@
+unit diagram_unit;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, TeeGDIPlus, TeEngine, TeeProcs, Chart, DBChart, ExtCtrls, Series,
+  Vcl.ExtDlgs, Vcl.Menus;
+
+type
+  Tdiagram_form = class(TForm)
+    Panel1: TPanel;
+    chart: TDBChart;
+    Series1: TBarSeries;
+    Series2: TBarSeries;
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    SavePictureDialog1: TSavePictureDialog;
+    procedure FormShow(Sender: TObject);
+    procedure N2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  diagram_form: Tdiagram_form;
+
+implementation
+
+{$R *.dfm}
+uses connection_unit, tndata_unit;
+
+procedure Tdiagram_form.FormShow(Sender: TObject);
+begin
+DBChart1.Series[0].Active:=true;
+DBChart1.Series[1].Active:=false;
+end;
+
+procedure Tdiagram_form.N2Click(Sender: TObject);
+begin
+ SavePictureDialog1.InitialDir:=ExtractFilePath(ParamStr(0));
+ SavePictureDialog1.Execute;
+ chart.SaveToBitmapFile(SavePictureDialog1.FileName);
+end;
+
+end.
