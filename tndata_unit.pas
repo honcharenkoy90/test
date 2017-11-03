@@ -19,7 +19,6 @@ type
     sectionDs: TUniDataSource;
     dataDs: TUniDataSource;
     areaGrid: TDBGridEh;
-    sectionGrid: TDBGridEh;
     areaTableID: TIntegerField;
     areaTablename: TStringField;
     areaTableengineer: TStringField;
@@ -54,7 +53,6 @@ type
     detailTableddID: TIntegerField;
     detailTableDetID: TIntegerField;
     detailTabledate: TDateField;
-    detailTableengineer: TStringField;
     detailTabledet_count: TFloatField;
     dataTablevolume: TFloatField;
     dataTableend_date: TDateField;
@@ -80,13 +78,21 @@ type
     Panel1: TPanel;
     diagramBtn: TBitBtn;
     areaTablepath: TStringField;
-    sectionTablename_main: TStringField;
     sectionTablepath: TStringField;
     N9: TMenuItem;
     cleartnBtn: TBitBtn;
     clearphBtn: TBitBtn;
     clearsecBtn: TBitBtn;
     N10: TMenuItem;
+    main_sectGrid: TDBGridEh;
+    sectionGrid: TDBGridEh;
+    main_secTable: TUniTable;
+    main_secDs: TUniDataSource;
+    main_secTablemsID: TIntegerField;
+    main_secTableDetID: TIntegerField;
+    main_secTablename: TStringField;
+    main_secTableworking: TFloatField;
+    main_secTablepath: TStringField;
     procedure FormCreate(Sender: TObject);
     procedure areaGridCellClick(Column: TColumnEh);
     procedure sectionGridCellClick(Column: TColumnEh);
@@ -116,6 +122,7 @@ type
     procedure clearphBtnClick(Sender: TObject);
     procedure clearsecBtnClick(Sender: TObject);
     procedure N10Click(Sender: TObject);
+    procedure main_sectGridCellClick(Column: TColumnEh);
   private
     { Private declarations }
   public
@@ -302,8 +309,6 @@ detailTable.Edit;
 detailTable.DisableControls;
 try
 detailTabledate.AsDateTime:=date;
-detailTableengineer.Value:=connection_module.connection.Username;
-//+занести ім'я інженера, що завантажив дані
 finally
 detailTable.Post;
 detailTable.RecNo:=pos;
@@ -320,9 +325,15 @@ begin
  dataTable.Open;
  detailTable.Open;
  photoTable.Open;
+ main_secTable.Open;
 end;
 
- //формування загального звіту по ділянці за даними ТН
+ procedure Ttn_form.main_sectGridCellClick(Column: TColumnEh);
+begin
+  DBNavigator1.DataSource:= main_secDs;
+end;
+
+//формування загального звіту по ділянці за даними ТН
 procedure Ttn_form.N10Click(Sender: TObject);
 begin
  rep_form.Show;
@@ -537,7 +548,7 @@ try
  dataTable.Append;
    dataTablework_name.Value:= TempTable.FieldByName('Наименование работ').Value;
    dataTableunit.Value:=TempTable.FieldByName('Ед изм').Value;
-   dataTableend_date.Value:= TempTable.FieldByName('Дата окончания').Value;
+   //dataTableend_date.Value:= TempTable.FieldByName('Дата окончания').Value;
    dataTablevolume.Value:= TempTable.FieldByName('Объем').Value;
    TempTable.Next;
  end;

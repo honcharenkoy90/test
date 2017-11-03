@@ -4,7 +4,7 @@ object connection_module: Tconnection_module
   Height = 312
   Width = 445
   object connection: TUniConnection
-    Database = 'metro'
+    Database = 'metro_new'
     SpecificOptions.Strings = (
       'SQL Server.Authentication=auWindows')
     LoginPrompt = False

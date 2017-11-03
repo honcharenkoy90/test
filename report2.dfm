@@ -52,6 +52,7 @@ object rep_form: Trep_form
     OutlineWidth = 121
     ThumbnailVisible = False
     UseReportHints = True
+    ExplicitTop = 55
   end
   object frxUniDACComponents1: TfrxUniDACComponents
     DefaultDatabase = connection_module.connection
@@ -64,7 +65,7 @@ object rep_form: Trep_form
     Left = 24
     Top = 96
     Bitmap = {
-      494C01010300140054012D002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140058012D002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000B40000002800000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1066,6 +1067,10 @@ object rep_form: Trep_form
       item
         DataSet = alldataReport.UniDACTabledata
         DataSetName = 'UniDACTabledata'
+      end
+      item
+        DataSet = alldataReport.UniDACTablemain_section
+        DataSetName = 'UniDACTablemain_section'
       end>
     Variables = <>
     Style = <>
@@ -1084,11 +1089,11 @@ object rep_form: Trep_form
         UserName = 'UniDACTablesection'
         CloseDataSource = True
         BCDToCurrency = False
-        Master = alldataReport.UniDACTablearea
-        MasterFields = 'DetID=ID'
+        Master = alldataReport.UniDACTablemain_section
+        MasterFields = 'DetID=msID'
         TableName = 'section'
         IndexFieldNames = 'DetID'
-        pLeft = 236
+        pLeft = 356
         pTop = 188
       end
       object UniDACTabledata: TfrxUniDACTable
@@ -1099,7 +1104,18 @@ object rep_form: Trep_form
         MasterFields = 'DetID=sectID'
         TableName = 'tn_data'
         IndexFieldNames = 'DetID'
-        pLeft = 372
+        pLeft = 472
+        pTop = 188
+      end
+      object UniDACTablemain_section: TfrxUniDACTable
+        UserName = 'UniDACTablemain_section'
+        CloseDataSource = True
+        BCDToCurrency = False
+        Master = alldataReport.UniDACTablearea
+        MasterFields = 'DetID=ID'
+        TableName = 'main_section'
+        IndexFieldNames = 'DetID'
+        pLeft = 236
         pTop = 188
       end
     end
@@ -1304,7 +1320,7 @@ object rep_form: Trep_form
         end
         object UniDACTableareaworking: TfrxMemoView
           Left = 710.551640000000000000
-          Top = 30.236239999999990000
+          Top = 30.236240000000000000
           Width = 45.354360000000000000
           Height = 18.897650000000000000
           ShowHint = False
@@ -1316,7 +1332,7 @@ object rep_form: Trep_form
         end
         object Memo12: TfrxMemoView
           Left = 755.906000000000000000
-          Top = 30.236239999999990000
+          Top = 30.236240000000000000
           Width = 18.897650000000000000
           Height = 18.897650000000000000
           ShowHint = False
@@ -1332,7 +1348,7 @@ object rep_form: Trep_form
         end
         object Memo13: TfrxMemoView
           Left = 623.622450000000000000
-          Top = 30.236239999999990000
+          Top = 30.236240000000000000
           Width = 83.149660000000000000
           Height = 18.897650000000000000
           ShowHint = False
@@ -1378,15 +1394,40 @@ object rep_form: Trep_form
             #1059#1095#1072#1089#1090#1086#1082':')
           ParentFont = False
         end
-        object UniDACTablesectionname_main: TfrxMemoView
+        object UniDACTablemain_sectionname: TfrxMemoView
           Left = 151.181200000000000000
           Top = 90.708720000000000000
-          Width = 468.661720000000000000
+          Width = 400.630180000000000000
           Height = 18.897650000000000000
           ShowHint = False
-          DataField = 'name_main'
-          DataSet = alldataReport.UniDACTablesection
-          DataSetName = 'UniDACTablesection'
+          DataField = 'name'
+          DataSet = alldataReport.UniDACTablemain_section
+          DataSetName = 'UniDACTablemain_section'
+          Memo.UTF8W = (
+            '[UniDACTablemain_section."name"]')
+        end
+        object Memo16: TfrxMemoView
+          Left = 623.622450000000000000
+          Top = 90.708720000000000000
+          Width = 83.149660000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftBottom]
+          Memo.UTF8W = (
+            #1042#1099#1087#1086#1083#1085#1077#1085#1086':')
+          ParentFont = False
+        end
+        object Memo17: TfrxMemoView
+          Left = 755.906000000000000000
+          Top = 90.708720000000000000
+          Width = 18.897650000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -1394,8 +1435,20 @@ object rep_form: Trep_form
           Font.Style = []
           Frame.Typ = [ftBottom]
           Memo.UTF8W = (
-            '[UniDACTablesection."name_main"]')
+            '%')
           ParentFont = False
+        end
+        object UniDACTablemain_sectionworking: TfrxMemoView
+          Left = 710.551640000000000000
+          Top = 90.708720000000000000
+          Width = 45.354360000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          DataField = 'working'
+          DataSet = alldataReport.UniDACTablemain_section
+          DataSetName = 'UniDACTablemain_section'
+          Memo.UTF8W = (
+            '[UniDACTablemain_section."working"]')
         end
       end
       object PageFooter1: TfrxPageFooter
@@ -1653,16 +1706,16 @@ object rep_form: Trep_form
       Font.Name = 'Tahoma'
       Font.Style = []
       BorderStyle = bsSingle
-      Height = 357.000000000000000000
-      ClientHeight = 319.000000000000000000
+      Height = 362.000000000000000000
+      ClientHeight = 324.000000000000000000
       Left = 460.000000000000000000
       Top = 219.000000000000000000
       Width = 671.000000000000000000
       ClientWidth = 655.000000000000000000
       object DBLookupComboBox1: TfrxDBLookupComboBox
         Left = 20.000000000000000000
-        Top = 72.000000000000000000
-        Width = 489.000000000000000000
+        Top = 44.000000000000000000
+        Width = 621.000000000000000000
         Height = 37.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
         Font.Color = clBlack
@@ -1680,8 +1733,8 @@ object rep_form: Trep_form
         DropDownRows = 7
       end
       object Label1: TfrxLabelControl
-        Left = 56.000000000000000000
-        Top = 32.000000000000000000
+        Left = 52.000000000000000000
+        Top = 12.000000000000000000
         Width = 205.000000000000000000
         Height = 28.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
@@ -1695,8 +1748,8 @@ object rep_form: Trep_form
         Color = clBtnFace
       end
       object Label2: TfrxLabelControl
-        Left = 56.000000000000000000
-        Top = 132.000000000000000000
+        Left = 52.000000000000000000
+        Top = 96.000000000000000000
         Width = 358.000000000000000000
         Height = 28.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
@@ -1710,9 +1763,9 @@ object rep_form: Trep_form
         Color = clBtnFace
       end
       object DBLookupComboBox2: TfrxDBLookupComboBox
-        Left = 20.000000000000000000
-        Top = 184.000000000000000000
-        Width = 621.000000000000000000
+        Left = 16.000000000000000000
+        Top = 128.000000000000000000
+        Width = 625.000000000000000000
         Height = 37.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
         Font.Color = clBlack
@@ -1722,16 +1775,16 @@ object rep_form: Trep_form
         ParentFont = False
         ShowHint = True
         AutoOpenDataSet = True
-        DataSet = alldataReport.UniDACTablesection
-        DataSetName = 'UniDACTablesection'
+        DataSet = alldataReport.UniDACTablemain_section
+        DataSetName = 'UniDACTablemain_section'
         ListField = 'name'
         KeyField = 'name'
         DropDownWidth = 0
         DropDownRows = 7
       end
       object BitBtn1: TfrxBitBtnControl
-        Left = 160.000000000000000000
-        Top = 252.000000000000000000
+        Left = 124.000000000000000000
+        Top = 264.000000000000000000
         Width = 107.000000000000000000
         Height = 45.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
@@ -1764,8 +1817,8 @@ object rep_form: Trep_form
         NumGlyphs = 2
       end
       object BitBtn2: TfrxBitBtnControl
-        Left = 364.000000000000000000
-        Top = 252.000000000000000000
+        Left = 360.000000000000000000
+        Top = 264.000000000000000000
         Width = 107.000000000000000000
         Height = 45.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
@@ -1797,6 +1850,41 @@ object rep_form: Trep_form
         ModalResult = 2
         NumGlyphs = 2
         OnClick = 'BitBtn2OnClick'
+      end
+      object DBLookupComboBox3: TfrxDBLookupComboBox
+        Left = 16.000000000000000000
+        Top = 212.000000000000000000
+        Width = 625.000000000000000000
+        Height = 37.000000000000000000
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clBlack
+        Font.Height = -21
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
+        ShowHint = True
+        AutoOpenDataSet = True
+        DataSet = alldataReport.UniDACTablesection
+        DataSetName = 'UniDACTablesection'
+        ListField = 'name'
+        KeyField = 'name'
+        DropDownWidth = 0
+        DropDownRows = 7
+      end
+      object Label3: TfrxLabelControl
+        Left = 52.000000000000000000
+        Top = 176.000000000000000000
+        Width = 395.000000000000000000
+        Height = 28.000000000000000000
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clNavy
+        Font.Height = -24
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        ShowHint = True
+        Caption = #1042#1099#1073#1077#1088#1080#1090#1077' '#1087#1086#1076#1088#1072#1079#1076#1077#1083' '#1089#1090#1088#1086#1080#1090#1077#1083#1100#1089#1090#1074#1072
+        Color = clBtnFace
       end
     end
     object Page2: TfrxReportPage
@@ -1904,6 +1992,10 @@ object rep_form: Trep_form
       item
         DataSet = detailReport.UniDACTabledetail
         DataSetName = 'UniDACTabledetail'
+      end
+      item
+        DataSet = detailReport.UniDACTablemain_section
+        DataSetName = 'UniDACTablemain_section'
       end>
     Variables = <>
     Style = <>
@@ -1922,11 +2014,11 @@ object rep_form: Trep_form
         UserName = 'UniDACTablesection'
         CloseDataSource = True
         BCDToCurrency = False
-        Master = detailReport.UniDACTablearea
-        MasterFields = 'DetID=ID'
+        Master = detailReport.UniDACTablemain_section
+        MasterFields = 'DetID=msID'
         TableName = 'section'
         IndexFieldNames = 'DetID'
-        pLeft = 244
+        pLeft = 352
         pTop = 212
       end
       object UniDACTabledata: TfrxUniDACTable
@@ -1937,7 +2029,7 @@ object rep_form: Trep_form
         MasterFields = 'DetID=sectID'
         TableName = 'tn_data'
         IndexFieldNames = 'DetID'
-        pLeft = 380
+        pLeft = 488
         pTop = 212
       end
       object UniDACTabledetail: TfrxUniDACTable
@@ -1948,7 +2040,18 @@ object rep_form: Trep_form
         MasterFields = 'DetID=dataID'
         TableName = 'detail_data'
         IndexFieldNames = 'DetID'
-        pLeft = 516
+        pLeft = 624
+        pTop = 212
+      end
+      object UniDACTablemain_section: TfrxUniDACTable
+        UserName = 'UniDACTablemain_section'
+        CloseDataSource = True
+        BCDToCurrency = False
+        Master = detailReport.UniDACTablearea
+        MasterFields = 'DetID=ID'
+        TableName = 'main_section'
+        IndexFieldNames = 'DetID'
+        pLeft = 232
         pTop = 212
       end
     end
@@ -2275,15 +2378,15 @@ object rep_form: Trep_form
             #1059#1095#1072#1089#1090#1086#1082':')
           ParentFont = False
         end
-        object UniDACTablesectionname_main: TfrxMemoView
+        object UniDACTablemain_sectionname: TfrxMemoView
           Left = 158.740260000000000000
-          Top = 102.047310000000000000
-          Width = 468.661720000000000000
+          Top = 105.826840000000000000
+          Width = 411.968770000000000000
           Height = 18.897650000000000000
           ShowHint = False
-          DataField = 'name_main'
-          DataSet = detailReport.UniDACTablesection
-          DataSetName = 'UniDACTablesection'
+          DataField = 'name'
+          DataSet = detailReport.UniDACTablemain_section
+          DataSetName = 'UniDACTablemain_section'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -2291,7 +2394,58 @@ object rep_form: Trep_form
           Font.Style = []
           Frame.Typ = [ftBottom]
           Memo.UTF8W = (
-            '[UniDACTablesection."name_main"]')
+            '[UniDACTablemain_section."name"]')
+          ParentFont = False
+        end
+        object Memo20: TfrxMemoView
+          Left = 631.181510000000000000
+          Top = 102.047310000000000000
+          Width = 83.149660000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftBottom]
+          Memo.UTF8W = (
+            #1042#1099#1087#1086#1083#1085#1077#1085#1086':')
+          ParentFont = False
+        end
+        object Memo21: TfrxMemoView
+          Left = 782.362710000000000000
+          Top = 102.047310000000000000
+          Width = 18.897650000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftBottom]
+          Memo.UTF8W = (
+            '%')
+          ParentFont = False
+        end
+        object UniDACTablemain_sectionworking: TfrxMemoView
+          Left = 718.110700000000000000
+          Top = 102.047310000000000000
+          Width = 56.692950000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          DataField = 'working'
+          DataSet = detailReport.UniDACTablemain_section
+          DataSetName = 'UniDACTablemain_section'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftBottom]
+          Memo.UTF8W = (
+            '[UniDACTablemain_section."working"]')
           ParentFont = False
         end
       end
@@ -2491,7 +2645,7 @@ object rep_form: Trep_form
         object Memo5: TfrxMemoView
           Left = 495.118430000000000000
           Top = 3.779530000000022000
-          Width = 56.692950000000010000
+          Width = 56.692950000000000000
           Height = 18.897650000000000000
           ShowHint = False
           Color = 13434828
@@ -2605,7 +2759,7 @@ object rep_form: Trep_form
         end
         object UniDACTabledataunit: TfrxMemoView
           Left = 495.118430000000000000
-          Width = 56.692950000000010000
+          Width = 56.692950000000000000
           Height = 18.897650000000000000
           ShowHint = False
           DataField = 'unit'
@@ -2701,8 +2855,8 @@ object rep_form: Trep_form
       Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = []
-      Height = 310.000000000000000000
-      ClientHeight = 272.000000000000000000
+      Height = 412.000000000000000000
+      ClientHeight = 374.000000000000000000
       Left = 563.000000000000000000
       Top = 203.000000000000000000
       Width = 623.000000000000000000
@@ -2710,8 +2864,8 @@ object rep_form: Trep_form
       OnShow = 'DialogPage1OnShow'
       object DBLookupComboBox1: TfrxDBLookupComboBox
         Left = 20.000000000000000000
-        Top = 44.000000000000000000
-        Width = 413.000000000000000000
+        Top = 48.000000000000000000
+        Width = 577.000000000000000000
         Height = 29.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
         Font.Color = clBlack
@@ -2745,7 +2899,7 @@ object rep_form: Trep_form
       end
       object Label2: TfrxLabelControl
         Left = 20.000000000000000000
-        Top = 80.000000000000000000
+        Top = 96.000000000000000000
         Width = 313.000000000000000000
         Height = 24.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
@@ -2760,7 +2914,7 @@ object rep_form: Trep_form
       end
       object DBLookupComboBox2: TfrxDBLookupComboBox
         Left = 20.000000000000000000
-        Top = 112.000000000000000000
+        Top = 128.000000000000000000
         Width = 577.000000000000000000
         Height = 33.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
@@ -2771,8 +2925,8 @@ object rep_form: Trep_form
         ParentFont = False
         ShowHint = True
         AutoOpenDataSet = True
-        DataSet = detailReport.UniDACTablesection
-        DataSetName = 'UniDACTablesection'
+        DataSet = detailReport.UniDACTablemain_section
+        DataSetName = 'UniDACTablemain_section'
         ListField = 'name'
         KeyField = 'name'
         DropDownWidth = 0
@@ -2780,7 +2934,7 @@ object rep_form: Trep_form
       end
       object BitBtn1: TfrxBitBtnControl
         Left = 108.000000000000000000
-        Top = 224.000000000000000000
+        Top = 328.000000000000000000
         Width = 95.000000000000000000
         Height = 33.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
@@ -2815,7 +2969,7 @@ object rep_form: Trep_form
       end
       object BitBtn2: TfrxBitBtnControl
         Left = 308.000000000000000000
-        Top = 224.000000000000000000
+        Top = 328.000000000000000000
         Width = 95.000000000000000000
         Height = 33.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
@@ -2849,8 +3003,8 @@ object rep_form: Trep_form
       end
       object DateEdit1: TfrxDateEditControl
         Left = 104.000000000000000000
-        Top = 184.000000000000000000
-        Width = 105.000000000000000000
+        Top = 288.000000000000000000
+        Width = 109.000000000000000000
         Height = 25.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
         Font.Color = clBlack
@@ -2867,7 +3021,7 @@ object rep_form: Trep_form
       end
       object DateEdit2: TfrxDateEditControl
         Left = 300.000000000000000000
-        Top = 184.000000000000000000
+        Top = 288.000000000000000000
         Width = 109.000000000000000000
         Height = 25.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
@@ -2884,7 +3038,7 @@ object rep_form: Trep_form
       end
       object Label3: TfrxLabelControl
         Left = 20.000000000000000000
-        Top = 152.000000000000000000
+        Top = 256.000000000000000000
         Width = 429.000000000000000000
         Height = 24.000000000000000000
         Font.Charset = RUSSIAN_CHARSET
@@ -2897,6 +3051,41 @@ object rep_form: Trep_form
         Caption = #1042#1099#1073#1077#1088#1080#1090#1077' '#1080#1085#1090#1077#1088#1077#1089#1091#1102#1097#1080#1081' '#1076#1080#1072#1087#1072#1079#1086#1085' '#1086#1090#1095#1077#1090#1086#1074':'
         Color = clBtnFace
         OnClick = 'Label3OnClick'
+      end
+      object Label4: TfrxLabelControl
+        Left = 20.000000000000000000
+        Top = 176.000000000000000000
+        Width = 345.000000000000000000
+        Height = 24.000000000000000000
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clNavy
+        Font.Height = -21
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        ShowHint = True
+        Caption = #1042#1099#1073#1077#1088#1080#1090#1077' '#1087#1086#1076#1088#1072#1079#1076#1077#1083' '#1089#1090#1088#1086#1080#1090#1077#1083#1100#1089#1090#1074#1072
+        Color = clBtnFace
+      end
+      object DBLookupComboBox3: TfrxDBLookupComboBox
+        Left = 20.000000000000000000
+        Top = 208.000000000000000000
+        Width = 577.000000000000000000
+        Height = 33.000000000000000000
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clBlack
+        Font.Height = -19
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
+        ShowHint = True
+        AutoOpenDataSet = True
+        DataSet = detailReport.UniDACTablesection
+        DataSetName = 'UniDACTablesection'
+        ListField = 'name'
+        KeyField = 'name'
+        DropDownWidth = 0
+        DropDownRows = 7
       end
     end
   end
@@ -2933,6 +3122,10 @@ object rep_form: Trep_form
       item
         DataSet = fullsectReport.UniDACTable3
         DataSetName = 'UniDACTable3'
+      end
+      item
+        DataSet = fullsectReport.UniDACTable4
+        DataSetName = 'UniDACTable4'
       end>
     Variables = <>
     Style = <>
@@ -2951,8 +3144,8 @@ object rep_form: Trep_form
         UserName = 'UniDACTable2'
         CloseDataSource = True
         BCDToCurrency = False
-        Master = fullsectReport.UniDACTable1
-        MasterFields = 'DetID=ID'
+        Master = fullsectReport.UniDACTable4
+        MasterFields = 'DetID=msID'
         TableName = 'section'
         IndexFieldNames = 'DetID'
         pLeft = 240
@@ -2968,6 +3161,17 @@ object rep_form: Trep_form
         IndexFieldNames = 'DetID'
         pLeft = 328
         pTop = 324
+      end
+      object UniDACTable4: TfrxUniDACTable
+        UserName = 'UniDACTable4'
+        CloseDataSource = True
+        BCDToCurrency = False
+        Master = fullsectReport.UniDACTable1
+        MasterFields = 'DetID=ID'
+        TableName = 'main_section'
+        IndexFieldNames = 'DetID'
+        pLeft = 156
+        pTop = 408
       end
     end
     object Page1: TfrxReportPage
@@ -3154,7 +3358,7 @@ object rep_form: Trep_form
       end
       object PageFooter1: TfrxPageFooter
         Height = 22.677180000000000000
-        Top = 400.630180000000000000
+        Top = 472.441250000000000000
         Width = 1046.929810000000000000
         object SysMemo3: TfrxSysMemoView
           Left = 1009.134510000000000000
@@ -3173,14 +3377,94 @@ object rep_form: Trep_form
         end
       end
       object MasterData1: TfrxMasterData
-        Height = 60.472480000000000000
+        Height = 49.133890000000000000
         Top = 196.535560000000000000
+        Width = 1046.929810000000000000
+        DataSet = fullsectReport.UniDACTable4
+        DataSetName = 'UniDACTable4'
+        RowCount = 0
+        object Memo2: TfrxMemoView
+          Width = 415.748300000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Color = 16763904
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1054#1089#1085#1086#1074#1085#1086#1081' '#1088#1072#1079#1076#1077#1083)
+          ParentFont = False
+        end
+        object Memo14: TfrxMemoView
+          Left = 415.748300000000000000
+          Width = 98.267780000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Color = 16763904
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #1042#1099#1087#1086#1083#1077#1085#1086',%')
+          ParentFont = False
+        end
+        object UniDACTable4name: TfrxMemoView
+          Top = 18.897650000000000000
+          Width = 415.748300000000000000
+          Height = 30.236240000000000000
+          ShowHint = False
+          DataField = 'name'
+          DataSet = fullsectReport.UniDACTable4
+          DataSetName = 'UniDACTable4'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[UniDACTable4."name"]')
+          ParentFont = False
+        end
+        object UniDACTable4working: TfrxMemoView
+          Left = 415.748300000000000000
+          Top = 18.897650000000000000
+          Width = 98.267780000000000000
+          Height = 30.236240000000000000
+          ShowHint = False
+          DataField = 'working'
+          DataSet = fullsectReport.UniDACTable4
+          DataSetName = 'UniDACTable4'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[UniDACTable4."working"]')
+          ParentFont = False
+        end
+      end
+      object DetailData1: TfrxDetailData
+        Height = 60.472480000000000000
+        Top = 268.346630000000000000
         Width = 1046.929810000000000000
         DataSet = fullsectReport.UniDACTable2
         DataSetName = 'UniDACTable2'
         RowCount = 0
         object UniDACTable2name: TfrxMemoView
-          Left = 415.748300000000000000
+          Left = 37.795300000000000000
           Top = 18.897650000000000000
           Width = 517.795610000000000000
           Height = 41.574830000000000000
@@ -3198,26 +3482,8 @@ object rep_form: Trep_form
             '[UniDACTable2."name"]')
           ParentFont = False
         end
-        object UniDACTable2name_main: TfrxMemoView
-          Top = 18.897650000000000000
-          Width = 415.748300000000000000
-          Height = 41.574830000000000000
-          ShowHint = False
-          DataField = 'name_main'
-          DataSet = fullsectReport.UniDACTable2
-          DataSetName = 'UniDACTable2'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          Memo.UTF8W = (
-            '[UniDACTable2."name_main"]')
-          ParentFont = False
-        end
         object UniDACTable2working: TfrxMemoView
-          Left = 933.543910000000000000
+          Left = 555.590910000000000000
           Top = 18.897650000000000000
           Width = 98.267780000000000000
           Height = 41.574830000000000000
@@ -3235,24 +3501,8 @@ object rep_form: Trep_form
             '[UniDACTable2."working"]')
           ParentFont = False
         end
-        object Memo2: TfrxMemoView
-          Width = 415.748300000000000000
-          Height = 18.897650000000000000
-          ShowHint = False
-          Color = clLime
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.UTF8W = (
-            #1054#1089#1085#1086#1074#1085#1086#1081' '#1088#1072#1079#1076#1077#1083)
-          ParentFont = False
-        end
         object Memo3: TfrxMemoView
-          Left = 415.748300000000000000
+          Left = 37.795300000000000000
           Width = 517.795610000000000000
           Height = 18.897650000000000000
           ShowHint = False
@@ -3269,7 +3519,7 @@ object rep_form: Trep_form
           ParentFont = False
         end
         object Memo10: TfrxMemoView
-          Left = 933.543910000000000000
+          Left = 555.590910000000000000
           Width = 98.267780000000000000
           Height = 18.897650000000000000
           ShowHint = False
@@ -3286,112 +3536,9 @@ object rep_form: Trep_form
           ParentFont = False
         end
       end
-      object DetailData1: TfrxDetailData
-        Height = 18.897650000000000000
-        Top = 321.260050000000000000
-        Width = 1046.929810000000000000
-        DataSet = fullsectReport.UniDACTable3
-        DataSetName = 'UniDACTable3'
-        RowCount = 0
-        object UniDACTabledatawork_name: TfrxMemoView
-          Width = 495.118430000000000000
-          Height = 18.897650000000000000
-          ShowHint = False
-          DataSetName = 'UniDACTabledata'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsItalic]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          Memo.UTF8W = (
-            '[UniDACTable3."work_name"]')
-          ParentFont = False
-        end
-        object UniDACTabledataunit: TfrxMemoView
-          Left = 495.118430000000000000
-          Width = 56.692950000000010000
-          Height = 18.897650000000000000
-          ShowHint = False
-          DataSetName = 'UniDACTabledata'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsItalic]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          Memo.UTF8W = (
-            '[UniDACTable3."unit"]')
-          ParentFont = False
-        end
-        object UniDACTabledatavolume: TfrxMemoView
-          Left = 551.811380000000000000
-          Width = 124.724490000000000000
-          Height = 18.897650000000000000
-          ShowHint = False
-          DataSetName = 'UniDACTabledata'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsItalic]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          Memo.UTF8W = (
-            '[UniDACTable3."volume"]')
-          ParentFont = False
-        end
-        object UniDACTabledataend_date: TfrxMemoView
-          Left = 676.535870000000000000
-          Width = 117.165430000000000000
-          Height = 18.897650000000000000
-          ShowHint = False
-          DataSetName = 'UniDACTabledata'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsItalic]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          Memo.UTF8W = (
-            '[UniDACTable3."end_date"]')
-          ParentFont = False
-        end
-        object UniDACTabledatawork_count: TfrxMemoView
-          Left = 793.701300000000000000
-          Width = 124.724490000000000000
-          Height = 18.897650000000000000
-          ShowHint = False
-          DataSetName = 'UniDACTabledata'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsItalic]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          Memo.UTF8W = (
-            '[UniDACTable3."work_count"]')
-          ParentFont = False
-        end
-        object UniDACTabledatawork_percent: TfrxMemoView
-          Left = 918.425790000000000000
-          Width = 113.385900000000000000
-          Height = 18.897650000000000000
-          ShowHint = False
-          DataSetName = 'UniDACTabledata'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsItalic]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          Memo.UTF8W = (
-            '[UniDACTable3."work_percent"]')
-          ParentFont = False
-        end
-      end
       object Header1: TfrxHeader
         Height = 18.897650000000000000
-        Top = 279.685220000000000000
+        Top = 351.496290000000000000
         Width = 1046.929810000000000000
         object Memo4: TfrxMemoView
           Width = 495.118430000000000000
@@ -3411,7 +3558,7 @@ object rep_form: Trep_form
         end
         object Memo5: TfrxMemoView
           Left = 495.118430000000000000
-          Width = 56.692950000000010000
+          Width = 56.692950000000000000
           Height = 18.897650000000000000
           ShowHint = False
           Color = 13434828
@@ -3492,6 +3639,109 @@ object rep_form: Trep_form
           HAlign = haCenter
           Memo.UTF8W = (
             #1042#1099#1087#1086#1083#1085#1077#1085#1085#1086', %')
+          ParentFont = False
+        end
+      end
+      object SubdetailData1: TfrxSubdetailData
+        Height = 18.897650000000000000
+        Top = 393.071120000000000000
+        Width = 1046.929810000000000000
+        DataSet = fullsectReport.UniDACTable3
+        DataSetName = 'UniDACTable3'
+        RowCount = 0
+        object UniDACTabledatawork_name: TfrxMemoView
+          Width = 495.118430000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          DataSetName = 'UniDACTabledata'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsItalic]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8W = (
+            '[UniDACTable3."work_name"]')
+          ParentFont = False
+        end
+        object UniDACTabledataunit: TfrxMemoView
+          Left = 495.118430000000000000
+          Width = 56.692950000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          DataSetName = 'UniDACTabledata'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsItalic]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8W = (
+            '[UniDACTable3."unit"]')
+          ParentFont = False
+        end
+        object UniDACTabledatavolume: TfrxMemoView
+          Left = 551.811380000000000000
+          Width = 124.724490000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          DataSetName = 'UniDACTabledata'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsItalic]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8W = (
+            '[UniDACTable3."volume"]')
+          ParentFont = False
+        end
+        object UniDACTabledataend_date: TfrxMemoView
+          Left = 676.535870000000000000
+          Width = 117.165430000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          DataSetName = 'UniDACTabledata'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsItalic]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8W = (
+            '[UniDACTable3."end_date"]')
+          ParentFont = False
+        end
+        object UniDACTabledatawork_count: TfrxMemoView
+          Left = 793.701300000000000000
+          Width = 124.724490000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          DataSetName = 'UniDACTabledata'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsItalic]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8W = (
+            '[UniDACTable3."work_count"]')
+          ParentFont = False
+        end
+        object UniDACTabledatawork_percent: TfrxMemoView
+          Left = 918.425790000000000000
+          Width = 113.385900000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          DataSetName = 'UniDACTabledata'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsItalic]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8W = (
+            '[UniDACTable3."work_percent"]')
           ParentFont = False
         end
       end

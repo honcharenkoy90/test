@@ -2194,13 +2194,13 @@ object tn_form: Ttn_form
       end>
     RowCollection = <
       item
-        Value = 40.770727666835260000
+        Value = 40.770727666835270000
       end
       item
-        Value = 52.229229300501200000
+        Value = 52.229229300501210000
       end
       item
-        Value = 7.000043032663524000
+        Value = 7.000043032663525000
       end
       item
         SizeStyle = ssAuto
@@ -2216,10 +2216,13 @@ object tn_form: Ttn_form
       Caption = 'GridPanel2'
       ColumnCollection = <
         item
-          Value = 42.999618380329100000
+          Value = 39.147638132153320000
         end
         item
-          Value = 57.000381619670890000
+          Value = 24.996064070808150000
+        end
+        item
+          Value = 35.856297797038530000
         end>
       ControlCollection = <
         item
@@ -2229,6 +2232,11 @@ object tn_form: Ttn_form
         end
         item
           Column = 1
+          Control = main_sectGrid
+          Row = 0
+        end
+        item
+          Column = 2
           Control = sectionGrid
           Row = 0
         end>
@@ -2244,7 +2252,7 @@ object tn_form: Ttn_form
       object areaGrid: TDBGridEh
         Left = 1
         Top = 1
-        Width = 503
+        Width = 458
         Height = 320
         Align = alClient
         Color = clWhite
@@ -2290,7 +2298,7 @@ object tn_form: Ttn_form
             Title.Font.Height = -16
             Title.Font.Name = 'Times New Roman'
             Title.Font.Style = [fsBold]
-            Width = 289
+            Width = 282
           end
           item
             DynProps = <>
@@ -2308,7 +2316,7 @@ object tn_form: Ttn_form
             Title.Font.Height = -16
             Title.Font.Name = 'Times New Roman'
             Title.Font.Style = [fsBold]
-            Width = 206
+            Width = 186
           end
           item
             DynProps = <>
@@ -2331,10 +2339,83 @@ object tn_form: Ttn_form
         object RowDetailData: TRowDetailPanelControlEh
         end
       end
-      object sectionGrid: TDBGridEh
-        Left = 504
+      object main_sectGrid: TDBGridEh
+        Left = 459
         Top = 1
-        Width = 667
+        Width = 292
+        Height = 320
+        Align = alClient
+        DataSource = main_secDs
+        DynProps = <>
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        GridLineParams.DataVertColor = clBlack
+        GridLineParams.DataHorzColor = clBlack
+        GridLineParams.VertEmptySpaceStyle = dessNonEh
+        IndicatorOptions = [gioShowRowIndicatorEh]
+        OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
+        ParentFont = False
+        RowLines = 3
+        SearchPanel.Enabled = True
+        TabOrder = 1
+        OnCellClick = main_sectGridCellClick
+        Columns = <
+          item
+            DynProps = <>
+            EditButtons = <>
+            FieldName = 'msID'
+            Footers = <>
+            Visible = False
+          end
+          item
+            DynProps = <>
+            EditButtons = <>
+            FieldName = 'DetID'
+            Footers = <>
+            Visible = False
+          end
+          item
+            DynProps = <>
+            EditButtons = <>
+            FieldName = 'name'
+            Footers = <>
+            Title.Caption = #1056#1072#1079#1076#1077#1083
+            Title.Font.Charset = RUSSIAN_CHARSET
+            Title.Font.Color = clWindowText
+            Title.Font.Height = -16
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+            Width = 197
+          end
+          item
+            DynProps = <>
+            EditButtons = <>
+            FieldName = 'working'
+            Footers = <>
+            Title.Caption = #1042#1099#1087#1086#1083'.%'
+            Title.Font.Charset = RUSSIAN_CHARSET
+            Title.Font.Color = clWindowText
+            Title.Font.Height = -16
+            Title.Font.Name = 'Times New Roman'
+            Title.Font.Style = [fsBold]
+          end
+          item
+            DynProps = <>
+            EditButtons = <>
+            FieldName = 'path'
+            Footers = <>
+            Visible = False
+          end>
+        object RowDetailData: TRowDetailPanelControlEh
+        end
+      end
+      object sectionGrid: TDBGridEh
+        Left = 751
+        Top = 1
+        Width = 420
         Height = 320
         Align = alClient
         Color = clWhite
@@ -2348,13 +2429,12 @@ object tn_form: Ttn_form
         GridLineParams.DataVertColor = clBlack
         GridLineParams.DataHorzColor = clBlack
         GridLineParams.VertEmptySpaceStyle = dessNonEh
-        ImeMode = imDisable
         IndicatorOptions = [gioShowRowIndicatorEh]
         OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
         ParentFont = False
         RowLines = 3
         SearchPanel.Enabled = True
-        TabOrder = 1
+        TabOrder = 2
         OnCellClick = sectionGridCellClick
         OnDblClick = sectionGridDblClick
         Columns = <
@@ -2364,19 +2444,6 @@ object tn_form: Ttn_form
             FieldName = 'sectID'
             Footers = <>
             Visible = False
-          end
-          item
-            DynProps = <>
-            EditButtons = <>
-            FieldName = 'name_main'
-            Font.Charset = RUSSIAN_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -16
-            Font.Name = 'Times New Roman'
-            Font.Style = [fsBold]
-            Footers = <>
-            Title.Caption = #1054#1089#1085#1086#1074#1085#1086#1081' '#1088#1072#1079#1076#1077#1083
-            Width = 227
           end
           item
             DynProps = <>
@@ -2430,7 +2497,7 @@ object tn_form: Ttn_form
       Top = 323
       Width = 1172
       Height = 413
-      ActivePage = Tabsumma
+      ActivePage = TabDetail
       Align = alClient
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWindowText
@@ -2650,25 +2717,6 @@ object tn_form: Ttn_form
               Title.Font.Name = 'Times New Roman'
               Title.Font.Style = [fsBold]
               Width = 148
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'engineer'
-              Font.Charset = RUSSIAN_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -16
-              Font.Name = 'Times New Roman'
-              Font.Style = [fsBold]
-              Footers = <>
-              Title.Caption = #1050#1090#1086' '#1074#1085#1077#1089' '#1076#1072#1085#1085#1099#1077
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clGreen
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = [fsBold, fsItalic]
-              Visible = False
-              Width = 255
             end
             item
               DynProps = <>
@@ -3024,7 +3072,7 @@ object tn_form: Ttn_form
   object areaTable: TUniTable
     TableName = 'area'
     Connection = connection_module.connection
-    Left = 72
+    Left = 32
     Top = 584
     object areaTableID: TIntegerField
       FieldName = 'ID'
@@ -3050,12 +3098,17 @@ object tn_form: Ttn_form
   object sectionTable: TUniTable
     TableName = 'section'
     Connection = connection_module.connection
-    MasterSource = areaDs
-    MasterFields = 'ID'
+    MasterSource = main_secDs
+    MasterFields = 'msID'
     DetailFields = 'DetID'
     AfterPost = sectionTableAfterPost
-    Left = 176
+    Left = 184
     Top = 584
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'msID'
+      end>
     object sectionTablesectID: TIntegerField
       FieldName = 'sectID'
       ReadOnly = True
@@ -3071,10 +3124,6 @@ object tn_form: Ttn_form
     end
     object sectionTableworking: TFloatField
       FieldName = 'working'
-    end
-    object sectionTablename_main: TStringField
-      FieldName = 'name_main'
-      Size = 250
     end
     object sectionTablepath: TStringField
       FieldName = 'path'
@@ -3130,7 +3179,7 @@ object tn_form: Ttn_form
   end
   object areaDs: TUniDataSource
     DataSet = areaTable
-    Left = 72
+    Left = 32
     Top = 648
   end
   object sectionDs: TUniDataSource
@@ -3221,10 +3270,6 @@ object tn_form: Ttn_form
     object detailTabledate: TDateField
       FieldName = 'date'
     end
-    object detailTableengineer: TStringField
-      FieldName = 'engineer'
-      Size = 150
-    end
     object detailTabledet_count: TFloatField
       FieldName = 'det_count'
       OnChange = detailTabledet_countChange
@@ -3294,5 +3339,45 @@ object tn_form: Ttn_form
     TableName = 'tab'
     Left = 688
     Top = 120
+  end
+  object main_secTable: TUniTable
+    TableName = 'main_section'
+    Connection = connection_module.connection
+    MasterSource = areaDs
+    MasterFields = 'ID'
+    DetailFields = 'DetID'
+    Left = 104
+    Top = 584
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'ID'
+        Value = Null
+      end>
+    object main_secTablemsID: TIntegerField
+      FieldName = 'msID'
+      ReadOnly = True
+      Required = True
+    end
+    object main_secTableDetID: TIntegerField
+      FieldName = 'DetID'
+      Required = True
+    end
+    object main_secTablename: TStringField
+      FieldName = 'name'
+      Size = 500
+    end
+    object main_secTableworking: TFloatField
+      FieldName = 'working'
+    end
+    object main_secTablepath: TStringField
+      FieldName = 'path'
+      Size = 500
+    end
+  end
+  object main_secDs: TUniDataSource
+    DataSet = main_secTable
+    Left = 104
+    Top = 648
   end
 end
