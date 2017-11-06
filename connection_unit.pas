@@ -27,9 +27,9 @@ procedure Tconnection_module.DataModuleCreate(Sender: TObject);
 begin
 connection.ProviderName:='SQL Server';
 connection.LoginPrompt:=False;
-//connection.Server:= 'METRO-SRV';
+connection.Server:= 'METRO-SRV';
 //connection.Server:= 'DP-11-FSM\SQLEXPRESS';
-Connection.Server:= 'INFINITI\SQLEXPRESS';
+//Connection.Server:= 'INFINITI\SQLEXPRESS';
 connection.SpecificOptions.Values['Authentication']:='auWindows';
 connection.Database:='metro_new';
 //str:=UniConnection1.ConnectString;

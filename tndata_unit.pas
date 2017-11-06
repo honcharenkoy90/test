@@ -521,26 +521,27 @@ end;
 //завантаження даних по плану робіт у основну таблицю технагляду
 procedure Ttn_form.xls1Click(Sender: TObject);
 begin
- ODialog.InitialDir:= ExtractFilePath(ParamStr(0));
- Odialog.Filter:='Файлы MS Excel 2003 |*.xls';
+ ODialog.InitialDir:= ExtractFilePath(ParamStr(0))+'\для загрузки данных\';
+ Odialog.Filter:='Файлы MS Excel 2003-2007 |*.xls; *.xlsx';
 if ODialog.Execute then
 begin
 ADOCon.ConnectionString:=
-    'Provider=Microsoft.Jet.OLEDB.4.0;Data Source='+ODialog.Filename+';Extended Properties="Excel 8.0;HDR=Yes"';
+    //'Provider=Microsoft.Jet.OLEDB.8.0;Data Source='+ODialog.Filename+';Extended Properties="Excel 8.0;HDR=Yes"';
+    'Provider=Microsoft.ACE.OLEDB.12.0;Data Source='+ODialog.Filename+';Extended Properties="Excel 12.0;HDR=Yes;"'; {IMEX=1}
   ADOCon.Connected:=true;
   TempTable.open;
 end
 else
 exit;
 //
-dataTable.First;
+{dataTable.First;
 while not dataTable.Eof do
 begin
   datatable.Delete;
-end;
+end;}
 try
  TempTable.First;
- dataTable.First;
+ dataTable.Last;
  TempTable.DisableControls;
  connection_module.connection.StartTransaction;
  while not TempTable.Eof do
@@ -554,6 +555,7 @@ try
  end;
    If connection_module.connection.InTransaction Then connection_module.connection.Commit
 Finally
+   dataTable.Post;
    If connection_module.connection.InTransaction Then connection_module.connection.Rollback;
     TempTable.EnableControls;
     ShowMessage('Готово!');

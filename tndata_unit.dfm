@@ -2355,6 +2355,7 @@ object tn_form: Ttn_form
         GridLineParams.DataVertColor = clBlack
         GridLineParams.DataHorzColor = clBlack
         GridLineParams.VertEmptySpaceStyle = dessNonEh
+        ImeMode = imDisable
         IndicatorOptions = [gioShowRowIndicatorEh]
         OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
         ParentFont = False
@@ -2429,6 +2430,7 @@ object tn_form: Ttn_form
         GridLineParams.DataVertColor = clBlack
         GridLineParams.DataHorzColor = clBlack
         GridLineParams.VertEmptySpaceStyle = dessNonEh
+        ImeMode = imDisable
         IndicatorOptions = [gioShowRowIndicatorEh]
         OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
         ParentFont = False
@@ -2634,7 +2636,7 @@ object tn_form: Ttn_form
               Title.Font.Height = -16
               Title.Font.Name = 'Times New Roman'
               Title.Font.Style = []
-              Width = 282
+              Width = 409
             end>
           object RowDetailData: TRowDetailPanelControlEh
           end
@@ -2697,7 +2699,7 @@ object tn_form: Ttn_form
               Title.Font.Height = -16
               Title.Font.Name = 'Times New Roman'
               Title.Font.Style = [fsBold, fsItalic]
-              Width = 146
+              Width = 127
             end
             item
               DynProps = <>
@@ -2734,7 +2736,7 @@ object tn_form: Ttn_form
               Title.Font.Height = -16
               Title.Font.Name = 'Times New Roman'
               Title.Font.Style = [fsBold, fsItalic]
-              Width = 531
+              Width = 584
             end>
           object RowDetailData: TRowDetailPanelControlEh
           end
@@ -3104,11 +3106,6 @@ object tn_form: Ttn_form
     AfterPost = sectionTableAfterPost
     Left = 184
     Top = 584
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'msID'
-      end>
     object sectionTablesectID: TIntegerField
       FieldName = 'sectID'
       ReadOnly = True
@@ -3241,7 +3238,7 @@ object tn_form: Ttn_form
         OnClick = N8Click
       end
       object xls1: TMenuItem
-        Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1076#1072#1085#1085#1099#1093' '#1090#1077#1093#1085#1072#1076#1079#1086#1088#1072' (*.xls)'
+        Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1076#1072#1085#1085#1099#1093' '#1090#1077#1093#1085#1072#1076#1079#1086#1088#1072' (Excel)'
         OnClick = xls1Click
       end
       object N9: TMenuItem
@@ -3327,10 +3324,10 @@ object tn_form: Ttn_form
   end
   object ADOCon: TADOConnection
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\yuriy\Desk' +
+      'Provider=Microsoft.Jet.OLEDB.8.0;Data Source=C:\Users\yuriy\Desk' +
       'top\temp\1.xls;Persist Security Info=False;'
     LoginPrompt = False
-    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Provider = 'Microsoft.Jet.OLEDB.8.0'
     Left = 624
     Top = 120
   end
@@ -3348,12 +3345,6 @@ object tn_form: Ttn_form
     DetailFields = 'DetID'
     Left = 104
     Top = 584
-    ParamData = <
-      item
-        DataType = ftString
-        Name = 'ID'
-        Value = Null
-      end>
     object main_secTablemsID: TIntegerField
       FieldName = 'msID'
       ReadOnly = True
