@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, DB, DBAccess, Uni, MemDS, DBGridEhGrouping, ToolCtrlsEh,
   DBGridEhToolCtrls, DynVarsEh, GridsEh, DBAxisGridsEh, DBGridEh, Menus,
-  ComCtrls, DBCtrls, shellapi, ADODB, DateUtils, StdCtrls, Buttons;
+  ComCtrls, DBCtrls, shellapi, ADODB, DateUtils, StdCtrls, Buttons, ToolWin;
 
 type
   Ttn_form = class(TForm)
@@ -75,7 +75,6 @@ type
     TempTable: TADOTable;
     detailTablecomment: TStringField;
     photoTablecomment: TStringField;
-    Panel1: TPanel;
     diagramBtn: TBitBtn;
     areaTablepath: TStringField;
     sectionTablepath: TStringField;
@@ -93,6 +92,10 @@ type
     main_secTablename: TStringField;
     main_secTableworking: TFloatField;
     main_secTablepath: TStringField;
+    PageControl1: TPageControl;
+    TabNavi: TTabSheet;
+    TabData: TTabSheet;
+    ToolBar1: TToolBar;
     procedure FormCreate(Sender: TObject);
     procedure areaGridCellClick(Column: TColumnEh);
     procedure sectionGridCellClick(Column: TColumnEh);
@@ -215,7 +218,7 @@ holdcolor:=dataGrid.Canvas.Brush.Color;
 //y:=YearOf(now);
 {if Column.FieldName='end_date' then
 begin}
- if (dataTableend_date.Value>now) and (dataTablework_percent.Value<100) then
+ if {(dataTableend_date.Value>now) and }(dataTablework_percent.Value<100) then
    begin
      dataGrid.Canvas.Brush.Color:=clYellow;
      dataGrid.Canvas.Font.Color:=clBlack;
@@ -229,8 +232,8 @@ else
      dataGrid.Canvas.Font.Color:=clBlack;
      dataGrid.DefaultDrawColumnCell(Rect,DataCol, Column, State);
      dataGrid.Canvas.Brush.Color:=holdcolor;
-   end
-else
+   end   ;
+{else
 if (dataTableend_date.Value<now) and (dataTablework_percent.Value<>100) then
    begin
      dataGrid.Font.Color:=clBlack;
@@ -238,7 +241,7 @@ if (dataTableend_date.Value<now) and (dataTablework_percent.Value<>100) then
      dataGrid.Canvas.Brush.Color:=clSilver;
      dataGrid.DefaultDrawColumnCell(Rect,DataCol, Column, State);
      dataGrid.Canvas.Brush.Color:=holdcolor;
-   end;
+   end; }
 end;
 
 //підрахунок відсотку виконання розділу
@@ -321,6 +324,7 @@ end;
 procedure Ttn_form.FormCreate(Sender: TObject);
 begin
  pages_tndata.ActivePageIndex:=0;
+ PageControl1.ActivePageIndex:=0;
  areaTable.Open;
  sectionTable.Open;
  dataTable.Open;
@@ -334,6 +338,7 @@ procedure Ttn_form.main_secTableAfterPost(DataSet: TDataSet);
 var perc_sum, perc_data:real;
     count, pos:integer;
 begin
+exit;
 pos:=main_secTable.RecNo;
 perc_sum:=0;
 main_secTable.DisableControls;
@@ -526,6 +531,7 @@ procedure Ttn_form.sectionTableAfterPost(DataSet: TDataSet);
 var perc_sum, perc_data:real;
     count, pos:integer;
 begin
+exit;
 pos:=sectionTable.RecNo;
 perc_sum:=0;
 sectionTable.DisableControls;
@@ -552,7 +558,7 @@ end;
 //завантаження даних по плану робіт у основну таблицю технагляду
 procedure Ttn_form.xls1Click(Sender: TObject);
 begin
- ODialog.InitialDir:= ExtractFilePath(ParamStr(0))+'\для загрузки данных\';
+ ODialog.InitialDir:= ExtractFilePath(ParamStr(0));
  Odialog.Filter:='Файлы MS Excel 2003-2007 |*.xls; *.xlsx';
 if ODialog.Execute then
 begin
@@ -573,6 +579,8 @@ end;}
 try
  TempTable.First;
  dataTable.Last;
+ dataTable.Append;
+ dataTable.Post;
  TempTable.DisableControls;
  connection_module.connection.StartTransaction;
  while not TempTable.Eof do

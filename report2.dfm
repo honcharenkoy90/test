@@ -52,7 +52,6 @@ object rep_form: Trep_form
     OutlineWidth = 121
     ThumbnailVisible = False
     UseReportHints = True
-    ExplicitTop = 55
   end
   object frxUniDACComponents1: TfrxUniDACComponents
     DefaultDatabase = connection_module.connection
@@ -65,7 +64,7 @@ object rep_form: Trep_form
     Left = 24
     Top = 96
     Bitmap = {
-      494C01010300140058012D002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030014005C012D002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000B40000002800000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1229,7 +1228,7 @@ object rep_form: Trep_form
           Font.Color = clBlack
           Font.Height = -13
           Font.Name = 'Arial'
-          Font.Style = []
+          Font.Style = [fsUnderline]
           Frame.Typ = [ftBottom]
           Memo.UTF8W = (
             '[UniDACTablesection."name"]')
@@ -1320,9 +1319,10 @@ object rep_form: Trep_form
         end
         object UniDACTableareaworking: TfrxMemoView
           Left = 710.551640000000000000
-          Top = 30.236240000000000000
+          Top = 30.236239999999990000
           Width = 45.354360000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           DataField = 'working'
           DataSet = alldataReport.UniDACTablearea
@@ -1332,9 +1332,10 @@ object rep_form: Trep_form
         end
         object Memo12: TfrxMemoView
           Left = 755.906000000000000000
-          Top = 30.236240000000000000
+          Top = 30.236239999999990000
           Width = 18.897650000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -1348,9 +1349,10 @@ object rep_form: Trep_form
         end
         object Memo13: TfrxMemoView
           Left = 623.622450000000000000
-          Top = 30.236240000000000000
+          Top = 30.236239999999990000
           Width = 83.149660000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -1411,6 +1413,7 @@ object rep_form: Trep_form
           Top = 90.708720000000000000
           Width = 83.149660000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -1427,6 +1430,7 @@ object rep_form: Trep_form
           Top = 90.708720000000000000
           Width = 18.897650000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -1443,6 +1447,7 @@ object rep_form: Trep_form
           Top = 90.708720000000000000
           Width = 45.354360000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           DataField = 'working'
           DataSet = alldataReport.UniDACTablemain_section
@@ -2305,8 +2310,9 @@ object rep_form: Trep_form
         object UniDACTableareaworking: TfrxMemoView
           Left = 718.110700000000000000
           Top = 41.574830000000000000
-          Width = 56.692950000000000000
+          Width = 56.692950000000010000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           DataField = 'working'
           DataSet = detailReport.UniDACTablearea
@@ -2319,6 +2325,7 @@ object rep_form: Trep_form
           Top = 41.574830000000000000
           Width = 18.897650000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2335,6 +2342,7 @@ object rep_form: Trep_form
           Top = 41.574830000000000000
           Width = 83.149660000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2402,6 +2410,7 @@ object rep_form: Trep_form
           Top = 102.047310000000000000
           Width = 83.149660000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2418,6 +2427,7 @@ object rep_form: Trep_form
           Top = 102.047310000000000000
           Width = 18.897650000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2432,8 +2442,9 @@ object rep_form: Trep_form
         object UniDACTablemain_sectionworking: TfrxMemoView
           Left = 718.110700000000000000
           Top = 102.047310000000000000
-          Width = 56.692950000000000000
+          Width = 56.692950000000010000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           DataField = 'working'
           DataSet = detailReport.UniDACTablemain_section
@@ -3251,9 +3262,10 @@ object rep_form: Trep_form
         end
         object Memo12: TfrxMemoView
           Left = 699.213050000000000000
-          Top = 30.236240000000000000
+          Top = 30.236239999999990000
           Width = 18.897650000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -3266,10 +3278,11 @@ object rep_form: Trep_form
           ParentFont = False
         end
         object Memo13: TfrxMemoView
-          Left = 566.929500000000000000
-          Top = 30.236240000000000000
+          Left = 566.929499999999900000
+          Top = 30.236239999999990000
           Width = 83.149660000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -3337,9 +3350,10 @@ object rep_form: Trep_form
         end
         object UniDACTable1working: TfrxMemoView
           Left = 650.079160000000000000
-          Top = 30.236240000000000000
+          Top = 30.236239999999990000
           Width = 49.133890000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           DataField = 'working'
           DataSet = fullsectReport.UniDACTable1
@@ -3403,6 +3417,7 @@ object rep_form: Trep_form
           Left = 415.748300000000000000
           Width = 98.267780000000000000
           Height = 18.897650000000000000
+          Visible = False
           ShowHint = False
           Color = 16763904
           Font.Charset = DEFAULT_CHARSET
@@ -3440,6 +3455,7 @@ object rep_form: Trep_form
           Top = 18.897650000000000000
           Width = 98.267780000000000000
           Height = 30.236240000000000000
+          Visible = False
           ShowHint = False
           DataField = 'working'
           DataSet = fullsectReport.UniDACTable4
@@ -3464,7 +3480,7 @@ object rep_form: Trep_form
         DataSetName = 'UniDACTable2'
         RowCount = 0
         object UniDACTable2name: TfrxMemoView
-          Left = 37.795300000000000000
+          Left = -3.779530000000000000
           Top = 18.897650000000000000
           Width = 517.795610000000000000
           Height = 41.574830000000000000
@@ -3483,7 +3499,7 @@ object rep_form: Trep_form
           ParentFont = False
         end
         object UniDACTable2working: TfrxMemoView
-          Left = 555.590910000000000000
+          Left = 514.016080000000000000
           Top = 18.897650000000000000
           Width = 98.267780000000000000
           Height = 41.574830000000000000
@@ -3502,7 +3518,7 @@ object rep_form: Trep_form
           ParentFont = False
         end
         object Memo3: TfrxMemoView
-          Left = 37.795300000000000000
+          Left = -3.779530000000000000
           Width = 517.795610000000000000
           Height = 18.897650000000000000
           ShowHint = False
@@ -3519,7 +3535,7 @@ object rep_form: Trep_form
           ParentFont = False
         end
         object Memo10: TfrxMemoView
-          Left = 555.590910000000000000
+          Left = 514.016080000000000000
           Width = 98.267780000000000000
           Height = 18.897650000000000000
           ShowHint = False
