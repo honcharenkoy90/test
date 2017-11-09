@@ -2499,7 +2499,7 @@ object tn_form: Ttn_form
       Top = 323
       Width = 1172
       Height = 413
-      ActivePage = TabDetail
+      ActivePage = Tabsumma
       Align = alClient
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWindowText
@@ -2570,7 +2570,7 @@ object tn_form: Ttn_form
               Title.Font.Height = -16
               Title.Font.Name = 'Times New Roman'
               Title.Font.Style = []
-              Width = 56
+              Width = 55
             end
             item
               DynProps = <>
@@ -2583,7 +2583,7 @@ object tn_form: Ttn_form
               Title.Font.Height = -16
               Title.Font.Name = 'Times New Roman'
               Title.Font.Style = []
-              Width = 100
+              Width = 95
             end
             item
               DynProps = <>
@@ -3343,6 +3343,7 @@ object tn_form: Ttn_form
     MasterSource = areaDs
     MasterFields = 'ID'
     DetailFields = 'DetID'
+    AfterPost = main_secTableAfterPost
     Left = 104
     Top = 584
     object main_secTablemsID: TIntegerField

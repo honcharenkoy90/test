@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.380,=D:\доки\Delphi\програми\метро технагляд\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.773,D:\доки\Delphi\програми\метро технагляд\Unit1.pas=D:\доки\Delphi\програми\метро технагляд\diagram_unit.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.961,=D:\доки\Delphi\програми\метро технагляд\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.978,=D:\доки\Delphi\програми\метро технагляд\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.773,D:\доки\Delphi\програми\метро технагляд\Unit1.pas=D:\доки\Delphi\програми\метро технагляд\diagram_unit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.380,=D:\доки\Delphi\програми\метро технагляд\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.961,=D:\доки\Delphi\програми\метро технагляд\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.959,D:\доки\Delphi\програми\метро технагляд\Unit1.dfm=D:\доки\Delphi\програми\метро технагляд\connection_unit.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.562,=C:\Users\yuriy\Documents\RAD Studio\Projects\Unit7.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.959,D:\доки\Delphi\програми\метро технагляд\Unit1.pas=D:\доки\Delphi\програми\метро технагляд\connection_unit.pas</Transaction>
@@ -17,7 +17,8 @@
     <Transaction>1899.12.30 00:00:00.000.201,=D:\доки\Delphi\програми\метро технагляд\report2.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.876,D:\доки\Delphi\програми\метро технагляд\title_unit.dfm=D:\доки\Delphi\програми\метро технагляд\tndata_unit.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.540,D:\доки\Delphi\програми\метро технагляд\title_unit.dfm=C:\Users\yuriy\Documents\RAD Studio\Projects\Unit7.dfm</Transaction>
-  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="connection_unit.pas"/>
     <File Path="connection_unit.dfm"/>
     <File Path="diagram_unit.pas"/>

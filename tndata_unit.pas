@@ -123,6 +123,7 @@ type
     procedure clearsecBtnClick(Sender: TObject);
     procedure N10Click(Sender: TObject);
     procedure main_sectGridCellClick(Column: TColumnEh);
+    procedure main_secTableAfterPost(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -328,7 +329,35 @@ begin
  main_secTable.Open;
 end;
 
- procedure Ttn_form.main_sectGridCellClick(Column: TColumnEh);
+//розрахунок відсотку виконання ділянки
+procedure Ttn_form.main_secTableAfterPost(DataSet: TDataSet);
+var perc_sum, perc_data:real;
+    count, pos:integer;
+begin
+pos:=main_secTable.RecNo;
+perc_sum:=0;
+main_secTable.DisableControls;
+main_secTable.First;
+count:=main_secTable.RecordCount;
+try
+while not main_secTable.Eof do
+begin
+ perc_data:=0;
+ perc_data:=main_secTableworking.Value/count;
+ perc_sum:=perc_sum+perc_data;
+ main_secTable.Next;
+end;
+areaTable.Edit;
+areaTableworking.Value:=perc_sum;
+areaTable.Post;
+finally
+main_secTable.RecNo:=pos;
+main_secTable.EnableControls;
+end;
+
+end;
+
+procedure Ttn_form.main_sectGridCellClick(Column: TColumnEh);
 begin
   DBNavigator1.DataSource:= main_secDs;
 end;
@@ -435,6 +464,7 @@ finally
 end;
 end;
 
+//завантаження файлів у підрозділ
 procedure Ttn_form.N9Click(Sender: TObject);
 begin
 sectionTable.Edit;
@@ -491,6 +521,7 @@ begin
   else exit;
 end;
 
+//розрахунок відсотку виконання по головним розділам
 procedure Ttn_form.sectionTableAfterPost(DataSet: TDataSet);
 var perc_sum, perc_data:real;
     count, pos:integer;
@@ -508,9 +539,9 @@ begin
  perc_sum:=perc_sum+perc_data;
  sectionTable.Next;
 end;
-areaTable.Edit;
-areaTableworking.Value:=perc_sum;
-areaTable.Post;
+main_secTable.Edit;
+main_secTableworking.Value:=perc_sum;
+main_secTable.Post;
 finally
 sectionTable.RecNo:=pos;
 sectionTable.EnableControls;
