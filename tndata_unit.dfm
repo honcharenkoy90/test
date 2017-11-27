@@ -2165,866 +2165,946 @@ object tn_form: Ttn_form
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object GridPanel1: TGridPanel
+  object PageControl1: TPageControl
     Left = 0
     Top = 0
     Width = 1174
     Height = 793
+    ActivePage = TabData
     Align = alClient
-    Caption = 'GridPanel1'
-    ColumnCollection = <
-      item
-        Value = 100.000000000000000000
-      end>
-    ControlCollection = <
-      item
-        Column = 0
-        Control = GridPanel2
-        Row = 0
-      end
-      item
-        Column = 0
-        Control = pages_tndata
-        Row = 1
-      end
-      item
-        Column = 0
-        Control = Panel1
-        Row = 2
-      end>
-    RowCollection = <
-      item
-        Value = 40.770727666835260000
-      end
-      item
-        Value = 52.229229300501200000
-      end
-      item
-        Value = 7.000043032663524000
-      end
-      item
-        SizeStyle = ssAuto
-      end>
-    ShowCaption = False
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 0
-    object GridPanel2: TGridPanel
-      Left = 1
-      Top = 1
-      Width = 1172
-      Height = 322
-      Align = alClient
-      Caption = 'GridPanel2'
-      ColumnCollection = <
-        item
-          Value = 42.999618380329100000
-        end
-        item
-          Value = 57.000381619670890000
-        end>
-      ControlCollection = <
-        item
-          Column = 0
-          Control = areaGrid
-          Row = 0
-        end
-        item
-          Column = 1
-          Control = sectionGrid
-          Row = 0
-        end>
-      RowCollection = <
-        item
-          Value = 100.000000000000000000
-        end
-        item
-          SizeStyle = ssAuto
-        end>
-      ShowCaption = False
-      TabOrder = 0
-      object areaGrid: TDBGridEh
-        Left = 1
-        Top = 1
-        Width = 503
-        Height = 320
+    object TabNavi: TTabSheet
+      Caption = #1053#1072#1074#1080#1075#1072#1094#1080#1103' '#1087#1086' '#1091#1095#1072#1089#1090#1082#1072#1084
+      object GridPanel1: TGridPanel
+        Left = 0
+        Top = 0
+        Width = 1166
+        Height = 756
         Align = alClient
-        Color = clWhite
-        DataSource = areaDs
-        DynProps = <>
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -15
-        Font.Name = 'Times New Roman'
-        Font.Style = [fsBold]
-        GridLineParams.DataVertColor = clBlack
-        GridLineParams.DataHorzColor = clBlack
-        GridLineParams.VertEmptySpaceStyle = dessNonEh
-        ImeMode = imDisable
-        IndicatorOptions = [gioShowRowIndicatorEh]
-        OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
-        ParentFont = False
-        RowLines = 3
-        SearchPanel.Enabled = True
+        Caption = 'GridPanel1'
+        ColumnCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = GridPanel2
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        ShowCaption = False
         TabOrder = 0
-        OnCellClick = areaGridCellClick
-        Columns = <
-          item
+        object GridPanel2: TGridPanel
+          Left = 1
+          Top = 1
+          Width = 1164
+          Height = 754
+          Align = alClient
+          Caption = 'GridPanel2'
+          ColumnCollection = <
+            item
+              Value = 37.995004303999190000
+            end
+            item
+              Value = 24.171483016186970000
+            end
+            item
+              Value = 37.833512679813840000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = areaGrid
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = main_sectGrid
+              Row = 0
+            end
+            item
+              Column = 2
+              Control = sectionGrid
+              Row = 0
+            end>
+          RowCollection = <
+            item
+              Value = 100.000000000000000000
+            end
+            item
+              SizeStyle = ssAuto
+            end>
+          ShowCaption = False
+          TabOrder = 0
+          object areaGrid: TDBGridEh
+            Left = 1
+            Top = 1
+            Width = 441
+            Height = 752
+            Align = alClient
+            Color = clWhite
+            DataSource = areaDs
             DynProps = <>
-            EditButtons = <>
-            FieldName = 'ID'
-            Footers = <>
-            Visible = False
-          end
-          item
-            DynProps = <>
-            EditButtons = <>
-            FieldName = 'name'
+            EvenRowColor = clAqua
             Font.Charset = RUSSIAN_CHARSET
             Font.Color = clWindowText
-            Font.Height = -16
+            Font.Height = -15
             Font.Name = 'Times New Roman'
             Font.Style = [fsBold]
-            Footers = <>
-            Title.Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1091#1095#1072#1089#1090#1082#1072
-            Title.Font.Charset = RUSSIAN_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -16
-            Title.Font.Name = 'Times New Roman'
-            Title.Font.Style = [fsBold]
-            Width = 289
+            GridLineParams.DataVertColor = clBlack
+            GridLineParams.DataHorzColor = clBlack
+            GridLineParams.VertEmptySpaceStyle = dessNonEh
+            ImeMode = imDisable
+            IndicatorOptions = [gioShowRowIndicatorEh]
+            OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
+            ParentFont = False
+            RowLines = 3
+            SearchPanel.Enabled = True
+            TabOrder = 0
+            OnCellClick = areaGridCellClick
+            Columns = <
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'ID'
+                Footers = <>
+                Visible = False
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'name'
+                Font.Charset = RUSSIAN_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -16
+                Font.Name = 'Times New Roman'
+                Font.Style = [fsBold]
+                Footers = <>
+                Title.Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1091#1095#1072#1089#1090#1082#1072
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clWindowText
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 275
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'engineer'
+                Font.Charset = RUSSIAN_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -16
+                Font.Name = 'Times New Roman'
+                Font.Style = [fsBold]
+                Footers = <>
+                Title.Caption = #1060'.'#1048'. '#1080#1085#1078#1077#1085#1077#1088#1072
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clWindowText
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 153
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'working'
+                Font.Charset = RUSSIAN_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -16
+                Font.Name = 'Times New Roman'
+                Font.Style = [fsBold]
+                Footers = <>
+                Title.Caption = #1042#1099#1087#1086#1083'., %'
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clWindowText
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Visible = False
+                Width = 92
+              end>
+            object RowDetailData: TRowDetailPanelControlEh
+            end
           end
-          item
+          object main_sectGrid: TDBGridEh
+            Left = 442
+            Top = 1
+            Width = 280
+            Height = 752
+            Align = alClient
+            DataSource = main_secDs
             DynProps = <>
-            EditButtons = <>
-            FieldName = 'engineer'
+            EvenRowColor = clMoneyGreen
             Font.Charset = RUSSIAN_CHARSET
             Font.Color = clWindowText
-            Font.Height = -16
+            Font.Height = -15
             Font.Name = 'Times New Roman'
             Font.Style = [fsBold]
-            Footers = <>
-            Title.Caption = #1060'.'#1048'.'#1054'. '#1080#1085#1078#1077#1085#1077#1088#1072
-            Title.Font.Charset = RUSSIAN_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -16
-            Title.Font.Name = 'Times New Roman'
-            Title.Font.Style = [fsBold]
-            Width = 206
+            GridLineParams.DataVertColor = clBlack
+            GridLineParams.DataHorzColor = clBlack
+            GridLineParams.VertEmptySpaceStyle = dessNonEh
+            ImeMode = imDisable
+            IndicatorOptions = [gioShowRowIndicatorEh]
+            OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
+            ParentFont = False
+            RowLines = 3
+            SearchPanel.Enabled = True
+            TabOrder = 1
+            OnCellClick = main_sectGridCellClick
+            Columns = <
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'msID'
+                Footers = <>
+                Visible = False
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'DetID'
+                Footers = <>
+                Visible = False
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'name'
+                Footers = <>
+                Title.Caption = #1056#1072#1079#1076#1077#1083
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clWindowText
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 252
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'working'
+                Footers = <>
+                Title.Caption = #1042#1099#1087#1086#1083'.%'
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clWindowText
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Visible = False
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'path'
+                Footers = <>
+                Visible = False
+              end>
+            object RowDetailData: TRowDetailPanelControlEh
+            end
           end
-          item
+          object sectionGrid: TDBGridEh
+            Left = 722
+            Top = 1
+            Width = 441
+            Height = 752
+            Align = alClient
+            Color = clWhite
+            DataSource = sectionDs
             DynProps = <>
-            EditButtons = <>
-            FieldName = 'working'
+            EvenRowColor = clSkyBlue
             Font.Charset = RUSSIAN_CHARSET
             Font.Color = clWindowText
-            Font.Height = -16
+            Font.Height = -15
             Font.Name = 'Times New Roman'
             Font.Style = [fsBold]
-            Footers = <>
-            Title.Caption = #1042#1099#1087#1086#1083'., %'
-            Title.Font.Charset = RUSSIAN_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -16
-            Title.Font.Name = 'Times New Roman'
-            Title.Font.Style = [fsBold]
-            Width = 92
-          end>
-        object RowDetailData: TRowDetailPanelControlEh
-        end
-      end
-      object sectionGrid: TDBGridEh
-        Left = 504
-        Top = 1
-        Width = 667
-        Height = 320
-        Align = alClient
-        Color = clWhite
-        DataSource = sectionDs
-        DynProps = <>
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -15
-        Font.Name = 'Times New Roman'
-        Font.Style = [fsBold]
-        GridLineParams.DataVertColor = clBlack
-        GridLineParams.DataHorzColor = clBlack
-        GridLineParams.VertEmptySpaceStyle = dessNonEh
-        ImeMode = imDisable
-        IndicatorOptions = [gioShowRowIndicatorEh]
-        OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
-        ParentFont = False
-        RowLines = 3
-        SearchPanel.Enabled = True
-        TabOrder = 1
-        OnCellClick = sectionGridCellClick
-        OnDblClick = sectionGridDblClick
-        Columns = <
-          item
-            DynProps = <>
-            EditButtons = <>
-            FieldName = 'sectID'
-            Footers = <>
-            Visible = False
+            GridLineParams.DataVertColor = clBlack
+            GridLineParams.DataHorzColor = clBlack
+            GridLineParams.VertEmptySpaceStyle = dessNonEh
+            ImeMode = imDisable
+            IndicatorOptions = [gioShowRowIndicatorEh]
+            OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
+            ParentFont = False
+            RowLines = 3
+            SearchPanel.Enabled = True
+            TabOrder = 2
+            OnCellClick = sectionGridCellClick
+            OnDblClick = sectionGridDblClick
+            Columns = <
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'sectID'
+                Footers = <>
+                Visible = False
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'name'
+                Font.Charset = RUSSIAN_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -16
+                Font.Name = 'Times New Roman'
+                Font.Style = [fsBold]
+                Footers = <>
+                Title.Caption = #1055#1086#1076#1088#1072#1079#1076#1077#1083' '#1089#1090#1088#1086#1080#1090#1077#1083#1100#1089#1090#1074#1072
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clWindowText
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 417
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'DetID'
+                Footers = <>
+                Visible = False
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'working'
+                Font.Charset = RUSSIAN_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -16
+                Font.Name = 'Times New Roman'
+                Font.Style = [fsBold]
+                Footers = <>
+                Title.Caption = #1042#1099#1087#1086#1083'., %'
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clWindowText
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 85
+              end>
+            object RowDetailData: TRowDetailPanelControlEh
+            end
           end
-          item
-            DynProps = <>
-            EditButtons = <>
-            FieldName = 'name_main'
-            Font.Charset = RUSSIAN_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -16
-            Font.Name = 'Times New Roman'
-            Font.Style = [fsBold]
-            Footers = <>
-            Title.Caption = #1054#1089#1085#1086#1074#1085#1086#1081' '#1088#1072#1079#1076#1077#1083
-            Width = 227
-          end
-          item
-            DynProps = <>
-            EditButtons = <>
-            FieldName = 'name'
-            Font.Charset = RUSSIAN_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -16
-            Font.Name = 'Times New Roman'
-            Font.Style = [fsBold]
-            Footers = <>
-            Title.Caption = #1055#1086#1076#1088#1072#1079#1076#1077#1083' '#1089#1090#1088#1086#1080#1090#1077#1083#1100#1089#1090#1074#1072
-            Title.Font.Charset = RUSSIAN_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -16
-            Title.Font.Name = 'Times New Roman'
-            Title.Font.Style = [fsBold]
-            Width = 449
-          end
-          item
-            DynProps = <>
-            EditButtons = <>
-            FieldName = 'DetID'
-            Footers = <>
-            Visible = False
-          end
-          item
-            DynProps = <>
-            EditButtons = <>
-            FieldName = 'working'
-            Font.Charset = RUSSIAN_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -16
-            Font.Name = 'Times New Roman'
-            Font.Style = [fsBold]
-            Footers = <>
-            Title.Caption = #1042#1099#1087#1086#1083'., %'
-            Title.Font.Charset = RUSSIAN_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -16
-            Title.Font.Name = 'Times New Roman'
-            Title.Font.Style = [fsBold]
-            Width = 85
-          end>
-        object RowDetailData: TRowDetailPanelControlEh
         end
       end
     end
-    object pages_tndata: TPageControl
-      Left = 1
-      Top = 323
-      Width = 1172
-      Height = 413
-      ActivePage = Tabsumma
-      Align = alClient
-      Font.Charset = RUSSIAN_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Times New Roman'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 1
-      object Tabsumma: TTabSheet
-        Caption = #1057#1091#1084#1084#1072#1088#1085#1099#1077' '#1076#1072#1085#1085#1099#1077' '#1090#1077#1093#1085#1072#1076#1079#1086#1088#1072
-        object dataGrid: TDBGridEh
-          Left = 0
-          Top = 0
-          Width = 1164
-          Height = 379
-          Align = alClient
-          DataSource = dataDs
-          DynProps = <>
-          GridLineParams.DataVertColor = clBlack
-          GridLineParams.DataHorzColor = clBlack
-          GridLineParams.ColorScheme = glcsClassicEh
-          GridLineParams.VertEmptySpaceStyle = dessNonEh
-          ImeMode = imDisable
-          IndicatorOptions = [gioShowRowIndicatorEh]
-          OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
-          RowLines = 2
-          SearchPanel.Enabled = True
-          TabOrder = 0
-          OnCellClick = dataGridCellClick
-          OnDblClick = dataGridDblClick
-          OnDrawColumnCell = dataGridDrawColumnCell
-          Columns = <
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'dataID'
-              Footers = <>
-              Visible = False
+    object TabData: TTabSheet
+      Caption = #1044#1072#1085#1085#1099#1077' '#1058#1077#1093#1085#1072#1076#1079#1086#1088#1072
+      ImageIndex = 1
+      DesignSize = (
+        1166
+        756)
+      object pages_tndata: TPageControl
+        Left = 0
+        Top = 53
+        Width = 1166
+        Height = 703
+        ActivePage = TabDetail
+        Align = alClient
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 0
+        object Tabsumma: TTabSheet
+          Caption = #1057#1091#1084#1084#1072#1088#1085#1099#1077' '#1076#1072#1085#1085#1099#1077' '#1090#1077#1093#1085#1072#1076#1079#1086#1088#1072
+          object dataGrid: TDBGridEh
+            Left = 0
+            Top = 0
+            Width = 1158
+            Height = 669
+            Align = alClient
+            DataSource = dataDs
+            DynProps = <>
+            GridLineParams.DataVertColor = clBlack
+            GridLineParams.DataHorzColor = clBlack
+            GridLineParams.ColorScheme = glcsClassicEh
+            GridLineParams.VertEmptySpaceStyle = dessNonEh
+            ImeMode = imDisable
+            IndicatorOptions = [gioShowRowIndicatorEh]
+            OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
+            RowLines = 2
+            SearchPanel.Enabled = True
+            TabOrder = 0
+            OnCellClick = dataGridCellClick
+            OnDblClick = dataGridDblClick
+            OnDrawColumnCell = dataGridDrawColumnCell
+            Columns = <
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'dataID'
+                Footers = <>
+                Visible = False
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'DetID'
+                Footers = <>
+                Visible = False
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'work_name'
+                Footers = <>
+                Title.Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1088#1072#1073#1086#1090
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clBlue
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 270
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'unit'
+                Footers = <>
+                Title.Caption = #1045#1076'.'#1080#1079#1084
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clBlue
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 54
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'end_date'
+                Footers = <>
+                Title.Caption = #1043#1088#1072#1085#1080#1095'. '#1076#1072#1090#1072
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clBlue
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 100
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'volume'
+                Footers = <>
+                Title.Caption = #1054#1073#1098#1077#1084', '#1077#1076'.'
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clBlue
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 82
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'work_count'
+                Footers = <>
+                ReadOnly = True
+                Title.Caption = #1042#1099#1087#1086#1083'., '#1077#1076'.'
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clRed
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 89
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'work_percent'
+                Footers = <>
+                ReadOnly = True
+                Title.Caption = #1042#1099#1087#1086#1083'., %'
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clRed
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'comment'
+                Footers = <>
+                Title.Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1103
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clGreen
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 409
+              end>
+            object RowDetailData: TRowDetailPanelControlEh
             end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'DetID'
-              Footers = <>
-              Visible = False
+          end
+        end
+        object TabDetail: TTabSheet
+          Caption = #1044#1077#1090#1072#1083#1080#1079#1080#1088#1086#1074#1072#1085#1085#1099#1077' '#1076#1072#1085#1085#1099#1077
+          ImageIndex = 1
+          object detailGrid: TDBGridEh
+            Left = 0
+            Top = 0
+            Width = 1158
+            Height = 669
+            Align = alClient
+            DataSource = detailDs
+            DynProps = <>
+            Font.Charset = RUSSIAN_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -15
+            Font.Name = 'Times New Roman'
+            Font.Style = []
+            GridLineParams.DataVertColor = clBlack
+            GridLineParams.DataHorzColor = clBlack
+            GridLineParams.VertEmptySpaceStyle = dessNonEh
+            ImeMode = imDisable
+            IndicatorOptions = [gioShowRowIndicatorEh]
+            OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
+            ParentFont = False
+            RowLines = 2
+            TabOrder = 0
+            OnCellClick = detailGridCellClick
+            Columns = <
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'ddID'
+                Footers = <>
+                Visible = False
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'DetID'
+                Footers = <>
+                Visible = False
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'det_count'
+                Font.Charset = RUSSIAN_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -16
+                Font.Name = 'Times New Roman'
+                Font.Style = [fsBold]
+                Footers = <>
+                Title.Caption = #1042#1099#1087#1086#1083#1085#1077#1085#1086', '#1077#1076
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clGreen
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold, fsItalic]
+                Width = 127
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'date'
+                Font.Charset = RUSSIAN_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -16
+                Font.Name = 'Times New Roman'
+                Font.Style = [fsBold]
+                Footers = <>
+                Title.Caption = #1044#1072#1090#1072
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clBlue
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 148
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'comment'
+                Font.Charset = RUSSIAN_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -16
+                Font.Name = 'Times New Roman'
+                Font.Style = [fsBold]
+                Footers = <>
+                Title.Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clGreen
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold, fsItalic]
+                Width = 584
+              end>
+            object RowDetailData: TRowDetailPanelControlEh
             end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'work_name'
-              Footers = <>
-              Title.Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1088#1072#1073#1086#1090
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clBlue
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = []
-              Width = 270
+          end
+        end
+        object TabPhoto: TTabSheet
+          Caption = #1041#1072#1079#1072' '#1092#1086#1090#1086#1086#1090#1095#1077#1090#1086#1074' ('#1075#1072#1083#1077#1088#1077#1103')'
+          ImageIndex = 2
+          object photoGrid: TDBGridEh
+            Left = 0
+            Top = 0
+            Width = 1158
+            Height = 669
+            Align = alClient
+            DataSource = photoDs
+            DynProps = <>
+            GridLineParams.DataVertColor = clBlack
+            GridLineParams.DataHorzColor = clBlack
+            GridLineParams.VertEmptySpaceStyle = dessNonEh
+            ImeMode = imDisable
+            IndicatorOptions = [gioShowRowIndicatorEh]
+            OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
+            SearchPanel.Enabled = True
+            TabOrder = 0
+            OnCellClick = photoGridCellClick
+            OnDblClick = photoGridDblClick
+            Columns = <
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'DetID'
+                Footers = <>
+                Visible = False
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'phID'
+                Footers = <>
+                Visible = False
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'photo_name'
+                Footers = <>
+                Title.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1092#1086#1090#1086
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clGreen
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 415
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'date'
+                Footers = <>
+                Title.Caption = #1044#1072#1090#1072' '#1089#1085#1080#1084#1082#1072
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clGreen
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 116
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'path'
+                Footers = <>
+                Visible = False
+              end
+              item
+                DynProps = <>
+                EditButtons = <>
+                FieldName = 'comment'
+                Footers = <>
+                Title.Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+                Title.Font.Charset = RUSSIAN_CHARSET
+                Title.Font.Color = clGreen
+                Title.Font.Height = -16
+                Title.Font.Name = 'Times New Roman'
+                Title.Font.Style = [fsBold]
+                Width = 420
+              end>
+            object RowDetailData: TRowDetailPanelControlEh
             end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'unit'
-              Footers = <>
-              Title.Caption = #1045#1076'.'#1080#1079#1084
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clBlue
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = []
-              Width = 56
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'end_date'
-              Footers = <>
-              Title.Caption = #1043#1088#1072#1085#1080#1095'. '#1076#1072#1090#1072
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clBlue
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = []
-              Width = 100
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'volume'
-              Footers = <>
-              Title.Caption = #1054#1073#1098#1077#1084', '#1077#1076'.'
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clBlue
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = []
-              Width = 77
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'work_count'
-              Footers = <>
-              ReadOnly = True
-              Title.Caption = #1042#1099#1087#1086#1083'., '#1077#1076'.'
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clRed
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = []
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'work_percent'
-              Footers = <>
-              ReadOnly = True
-              Title.Caption = #1042#1099#1087#1086#1083'., %'
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clRed
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = []
-              Width = 79
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'comment'
-              Footers = <>
-              Title.Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1103
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clGreen
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = []
-              Width = 282
-            end>
-          object RowDetailData: TRowDetailPanelControlEh
           end
         end
       end
-      object TabDetail: TTabSheet
-        Caption = #1044#1077#1090#1072#1083#1080#1079#1080#1088#1086#1074#1072#1085#1085#1099#1077' '#1076#1072#1085#1085#1099#1077
-        ImageIndex = 1
-        object detailGrid: TDBGridEh
+      object ToolBar1: TToolBar
+        Left = 0
+        Top = 0
+        Width = 1166
+        Height = 53
+        ButtonHeight = 47
+        Caption = 'ToolBar1'
+        TabOrder = 1
+        object diagramBtn: TBitBtn
           Left = 0
           Top = 0
-          Width = 1164
-          Height = 379
-          Align = alClient
-          DataSource = detailDs
-          DynProps = <>
+          Width = 227
+          Height = 47
+          Align = alCustom
+          Caption = #1044#1080#1072#1075#1088#1072#1084#1084#1099' '#1074#1099#1087#1086#1083#1085#1077#1085#1080#1103' '#1088#1072#1073#1086#1090
+          DoubleBuffered = True
           Font.Charset = RUSSIAN_CHARSET
           Font.Color = clWindowText
-          Font.Height = -15
+          Font.Height = -13
           Font.Name = 'Times New Roman'
           Font.Style = []
-          GridLineParams.DataVertColor = clBlack
-          GridLineParams.DataHorzColor = clBlack
-          GridLineParams.VertEmptySpaceStyle = dessNonEh
-          ImeMode = imDisable
-          IndicatorOptions = [gioShowRowIndicatorEh]
-          OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
+          Glyph.Data = {
+            B6140000424DB61400000000000036000000280000002A000000290000000100
+            1800000000008014000000000000000000000000000000000000FFFFFFFFFFFF
+            FFFFFFFFFFFFFDFDFDF7F7F8F2F2F2EDEDEDEBEBEBE9E9EAE9E9EAE9E9EAE9E9
+            EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9
+            E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAEBEBEB
+            EFEFEFF4F4F4F9F9F9FDFDFDFFFFFFFFFFFFFFFFFFFFFFFF5454FFFFFFFFFFFF
+            FFFFFFF9F9F9EDEDEDDFDFDFCFCFD0C6C5C6C3C2C3C1C1C1C1C1C1C1C1C1C1C1
+            C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1
+            C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C3C2C3
+            C8C8C9D4D4D5E6E6E6F4F4F4FDFDFDFFFFFFFFFFFFFFFFFF5454FFFFFFFFFFFF
+            F7F7F8E6E6E6C8C8C9BBB7AEBAAF90C2B286C3B283C3B283C3B283C3B283C3B2
+            83C3B283C3B283C3B283C3B283C3B283C3B283C3B283C3B283C3B283C2B183BC
+            AC80BFAF81C3B283C3B283C3B283C3B283C3B283C3B283C3B283C3B283C4B384
+            C0B28ABBB29BBFBDBCD4D4D5EFEFEFFBFBFBFFFFFFFFFFFF5454FFFFFFFBFBFB
+            E6E6E6C9C8C7C0B391D3B86FD5BE7BD5BB71E4C15FE5C25FE5C25FE4C25FE5C2
+            5FE5C25FE5C25FE5C25FE4C15FDEBD60E3C05FDEBC5FDDBC5FDBBA5FD8B85FCA
+            B886D0B979E4C15FE5C25FE5C25FE5C25FE5C25FE5C25FE5C25FE4C15FDEBC5D
+            D8B960D9BB63C8B379BAB4A6D7D6D7F0F0F1FDFDFDFFFFFF5454FDFDFDF0F0F1
+            CFCFCFD1CABCD8C593DCC997DDC481E5D8B3DFBD5DE4C15FE4C15FE4C15EE4C1
+            5FE4C15FE4C15FE4C15EE3C05ED7C490CBB26BD4C28ED8C695D6C599D1BB7EDF
+            D4B6EADFC3E3C05EE4C15FE4C15FE4C15EE4C15FE4C15FE4C15EE1BF60D5BF84
+            D1C194D2BB7DCFBF93C5B587C4BFB2DDDDDEF9F9F9FFFFFF5454F9F9F9E5E5E5
+            D0CABBE6D3A3E7D5A5EADEC0DCC993E8D9B1DFC374E3BF5DE3BF5DE3BF5DE3BF
+            5DE3BF5DE3BF5DE3BF5DE3BF5DE7D49FDBD0B3ECDBB0EBDDB8E6CF92E2D1A4DD
+            CEA6E8DBBBE2BF5DE3BF5DE3BF5DE3BF5DE3BF5DE3BF5DE3BF5DE1BF60D3BD80
+            D2C49FE2D1A5E7DEC7DED0A9DDD2B7D3D1D0F2F2F2FDFDFD5454F7F7F8DBDAD9
+            DCC892E7CA7FE6CB82ECDEBBE1C783E5C778E6CA7CE2BE5BE3BE5BE2BE5BE3BE
+            5BE3BE5BE3BE5BE3BE5BE3BE5BE6C97DE6DEC9E6C97BE9D08EE5C775E6C97CE7
+            D197E9D499E2BE5BE2BE5BE3BE5BE3BE5BE3BE5BE3BE5BE3BE5BE1BE5EE7D6AA
+            DBCFB1E0C784E7D093E6CB85E8D091D7CCB2ECECECFDFDFD5454F4F4F4DBD5C6
+            E5C369E4C060E4C060E7C672E4C062E4C060E4C060E4C05FE4C05FE4C05FE4C0
+            5FE4C05FE4C05FE4C05FE4C05FE5C164E8C978E4C061E4C061E4C060E4C060E4
+            C060E4C061E4C05FE4C05FE4C05FE4C05FE4C05FE4C05FE4C05FE4C060E5C369
+            E7C877E5C165E4C060E4C060E4C061DDC380E7E7E6FBFBFB5454F4F4F4DED3B7
+            E7C265E7C265E7C265E7C265E7C265E7C265E7C265E7C265E7C265E7C266E8C4
+            67E7C266E7C265E7C265E7C265E7C265E7C265E7C265E7C265E7C265E7C265E7
+            C265E7C265E7C265E7C265E7C265E7C266E8C467E7C266E7C265E7C265E7C265
+            E7C265E7C265E7C265E7C265E7C265E2C376E5E4E3FBFBFB5454F4F4F4DCCFB2
+            E0B859E0B859E1B859E1B859E0B859E0B859E0B859E0B859E1B859E1B859E5BD
+            5EE1B95AE1B859E0B859E1B859E0B859E1B859E1B859E0B859E1B859E0B859E0
+            B859E1B859E1B859E1B859E1B859E1B95AE5BD5EE1B85AE1B859E0B859E1B859
+            E0B859E1B859E1B859E1B859E1B859DEBA68E6E4E3FBFBFB5454F4F4F4DCCEB1
+            DFB455DFB455DFB455DFB455DFB455DFB455DFB455DFB455DFB455DFB555E4BB
+            5EE0B657DFB455DFB455DFB455DFB455DFB455DFB455DFB455DFB455DFB455DF
+            B455DFB455DFB455DFB455DFB455E0B556E4BB5EE0B556DFB455DFB455DFB455
+            DFB455DFB455DFB455DFB455DFB455DDB764E6E4E2FBFBFB5454F4F4F4DBCDB0
+            DEB153DEB153DEB153DEB153DEB153DEB153DEB153DEB153DEB153DEB153E4B9
+            5FDFB255DEB153DEB153DEB153DEB153DEB153DEB153DEB153DEB153DEB153DE
+            B153DEB153DEB153DEB153DEB153DFB254E4B95FDFB254DEB153DEB153DEB153
+            DEB153DEB153DEB153DEB153DEB153DCB462E5E4E2FBFBFB5454F4F4F4DBCCAF
+            DDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDEAE50E3B8
+            5FDFB052DDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDD
+            AE4FDDAE4FDDAE4FDDAE4FDDAE4FDEAF51E3B75FDEAF51DDAE4FDDAE4FDDAE4F
+            DDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDBB15FE5E4E2FBFBFB5454F4F4F4DBCBAE
+            DCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDDAB4EE3B6
+            60DEAD51DCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDC
+            AA4DDCAA4DDCAA4DDCAA4DDCAA4DDDAC50E2B55FDDAC4FDCAA4DDCAA4DDCAA4D
+            DCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDAAE5DE5E4E2FBFBFB5454F4F4F4DAC9AD
+            D9A447D9A447D9A447D9A447D9A447D9A447D9A447D9A447D9A447D9A548E1B2
+            5FDAA74BD9A447D9A447D9A447D9A447D9A447D9A447D9A447D9A447D9A447D9
+            A447D9A447D9A447D9A447D9A447DAA64AE0B25EDAA64AD9A447D9A447D9A447
+            D9A447D9A447D9A447D9A447D9A447D7A957E5E4E2FBFBFB5454F4F4F4D8C8AE
+            D49E4CD49F4CD49E4CD49E4CD49E4CD49E4CD49F4CD49F4CD49E4CD49F4EDEAF
+            63D6A251D49F4CD49F4CD49F4CD49F4CD49F4CD49E4CD49F4CD49F4CD49F4CD4
+            9F4CD49F4CD49F4CD49F4CD49F4CD5A150DDAF63D5A14FD49F4CD49E4CD49F4C
+            D49F4CD49F4CD49F4CD49F4CD49F4CD4A45DE5E4E2FBFBFB5454F4F4F4D8C7B2
+            D19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD29F5CDCAF
+            6ED3A15FD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD1
+            9D5BD19D5BD19D5BD19D5BD19D5BD3A05EDCAF6ED3A05ED19D5BD19D5BD19D5B
+            D19D5BD19D5BD19D5BD19D5BD19D5BD1A369E5E4E3FBFBFB5454F4F4F4D7C5B3
+            CE995DCE995DCE9B5FCE9B60CE995DCE995DCE995DCE995DCE995DCE9A5FD9AD
+            71D09D61CE995DCE995DCE995DCE995DCE995DCE9A5ECE995ECE995DCE995DCE
+            995DCE995DCE995DCE995DCE995DCF9C60D9AC71CF9C60CE995DCE995DCE995D
+            CE995DCE995DCE995DCE995DCE995DCD9F6BE5E4E3FBFBFB5454F4F4F4D8C8B8
+            D3A675DAB58DE4C9ACE4C9ACD7AE81CB9559C99254C99254C99254CA9356D7A8
+            6ECC9759C99254C99254C99254CA9457D4A879E1C2A2DCB891CB955AC99254C9
+            9254C99254C99254C99254C99254CB9558D7A76DCB9558C99254C99254C99254
+            CB965BD5AA7CD2A472CA9355C99254CA9962E5E3E2FBFBFB5454F4F4F4E1D9D2
+            F0E1CEEAD3B8D9B27FDAB583F1E2D1DCB78BC9904AC98F49C98F49C9914BD6A7
+            6ACB9451C98F49C98F49C98F49D7AD7BF1E3D4E0C097EDDAC2E3C6A5CA9350C9
+            8F49C98F49C98F49C98F49C98F49CB934ED6A668CA934EC98F49C98F49CB9451
+            E6CBADF0E0CDF0E1D0D7AC7AC9904AC99659E5E3E2FBFBFB5454F4F4F4D4C0A5
+            C2821CBE7C10BE7B0EBE7C0FCD9A49F1E3D0D4A465CB9141CB9141CC9344DDB5
+            80E6CAA9D8AD74CB9243CD9549F1E1CFD6AB69BE7C0FC38623F1E2CEDBB480CB
+            9141CB9141CB9141CB9141CB9141CD9447D7A867CD9446CB9141CC9346E3C59E
+            E9D3B2C58927D6AD6BEEDBC4CD9547CA9753E5E3E2FBFBFB5454F4F4F4D2BC9A
+            BD7900BD7900BD7900BD7900BE7A03DBB579EAD3B5CE9648CC913ED29F58F2E3
+            D2E3C697F0E1CCD8AC70DEB986E9D2B0C18115BE7B08BE7B08D5A963F0DFCBCD
+            9443CC923FCC913FCC913ECC913ED7A96BF3E4D2E1BE91CC923FD6A869F1E2CD
+            C88E2BBD7900C58922EFDFC8D29F58CB9750E5E3E2FBFBFB5454F4F4F4D1BB96
+            BD7600BD7600BD7600BD7600BD7600C3841BEFDEC6D6A864CA8F35E1BE8CF1DE
+            CAC7892ED9AF78F2E5D2F4E7D7D6A974C58635C58637C58637CA904AF0DECCDB
+            B17ACF9851CF9850CF974FD19A55EDDAC1EDD6BCF3E5D3D3A157E7CCA8DDB87E
+            BE7804BD7600BE7A08E6CCA3DBB47BCA9548E5E3E2FBFBFB5454F4F4F4D1BA95
+            BC7400BC7400BC7400BC7400BC7502BE7A0EDCB680EAD3B5D4A263F2E3D3E5C4
+            A0CB914EC98D4AE1BF9AE5C8AACA8F4EC98C48C98C48C98C48C98C48DEBA92ED
+            D8C2D4A168D39F63D39F63DEB78CF2E5D6D9AA76E8CDB0EBD5B5F1E1CDCA903C
+            BD7606BC7400BC7400DAB275E6CAA2CA9547E5E3E2FBFBFB5454F4F4F4D1BA95
+            BC7200BC7200BD7404C27C1AC68632C98A3FD19C62F3E5D6ECD6BFEFDDCBDAAC
+            7ACE9353CB8E4BCB8F4CCC8F4DCB8E4BCB8E4BCB8E4BCB8E4BCB8E4BD0995FF5
+            E9DDD9AC79D39F63D39F64E7CAAAE9D0B6D8A772D8A978FAF5F0E7CBAECA8D47
+            C78738C48126BE770CCD9643EEDBBECB9546E5E3E1FBFBFB5454F4F4F4D1BA96
+            C07914C5832ECC8F4DCD9152CD9152CD9152CD9152DDB48BF1E0D0D8A979DAAA
+            79CF965ACD9152CD9152CD9152CD9152CD9152CD9152CD9152CD9152CE9255EF
+            DCC9E4C4A0D8A670D9AA76F2E2D2DDB58BD9A978CF9559D09960CE9255CD9152
+            CD9152CD9152CC9050CA8D46F2E4D4DFC19BE5E4E3FBFBFB5454F4F4F4D4C0A4
+            CD9253CE955BCE955BCE955BCE955BCE955BCE955BCF965ED29C68D0975FDBAE
+            80D19A63CE955BCE955BCE955BCE955BCE955BCE955BCE955BCE955BCF955CE3
+            C1A1EFDCC8DAAC78DEB385F4E8DCD8A97ADBAD7FD09861CE955BCE955BCE955B
+            CE955BCE955BCE955BCE955BE0BC99EDDFD2E6E5E5FBFBFB5454F4F4F4D4C1A9
+            D19A65D19A65D19A65D19A65D19A65D19A65D19A65D19A65D19A65D29B67DDB1
+            88D49F6CD19A65D19A65D19A65D19A65D19A65D19A65D19A65D19A65D19A65DA
+            AD83F4E8DDDDB284E7CAABEDD8C6D5A171DDB187D39D6AD19A65D19A65D19A65
+            D19A65D19A65D19A65D19A65D19A65D09F71E5E4E3FBFBFB5454F4F4F4D5C2AC
+            D49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED4A070DFB5
+            8FD6A375D49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED5
+            A172ECD5C2F0DECDF4E8DCE0BA98D5A273DFB58ED5A273D49E6ED49E6ED49E6E
+            D49E6ED49E6ED49E6ED49E6ED49E6ED2A277E5E4E3FBFBFB5454F4F4F4D5C3AE
+            D6A377D6A377D6A377D6A377D6A377D6A377D6A377D6A377D6A377D7A479E0B9
+            96D8A77DD6A377D6A377D6A377D6A377D6A377D6A377D6A377D6A377D6A377D6
+            A377DAAC85EDD9C7E9CDB6D6A479D8A67CE0B895D8A67BD6A377D6A377D6A377
+            D6A377D6A377D6A377D6A377D6A377D4A680E5E4E3FBFBFB5454F4F4F4D6C4B0
+            D9A880D9A880D9A880D9A880D9A880D9A880D9A880D9A880D9A880D9A982E2BD
+            9DDAAC86D9A880D9A880D9A880D9A880D9A880D9A880D9A880D9A880D9A880D9
+            A880D9A880DAAA84D9A982D9A880DAAB84E2BC9DDAAB84D9A880D9A880D9A880
+            D9A880D9A880D9A880D9A880D9A880D5AA87E5E4E3FBFBFB5454F4F4F4D7C5B2
+            DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAE8AE4C1
+            A4DDB18EDBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DB
+            AD88DBAD88DBAD88DBAD88DBAD88DCB08CE4C0A4DCB08CDBAD88DBAD88DBAD88
+            DBAD88DBAD88DBAD88DBAD88DBAD88D7AF8EE5E4E4FBFBFB5454F4F4F4D9C9B6
+            DEB391DEB391DEB391DEB391DEB391DEB391DEB391DEB391DEB391DEB493E6C5
+            ACDFB797DEB391DEB391DEB391DEB391DEB391DEB391DEB391DEB391DEB391DE
+            B391DEB391DEB391DEB391DEB391DFB695E5C4ABDFB695DEB391DEB391DEB391
+            DEB391DEB391DEB391DEB391DEB391DAB495E7E6E5FBFBFB5454F6F6F6DDCDBB
+            E0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B99BE7C9
+            B2E1BB9FE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0
+            B89AE0B89AE0B89AE0B89AE0B89AE1BA9DE7C8B2E1BA9DE0B89AE0B89AE0B89A
+            E0B89AE0B89AE0B89AE0B89AE0B89ADDB99EECEBEBFDFDFD5454FBFBFBE6DCD3
+            E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BFA4E9CD
+            BAE4C1A7E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3
+            BEA3E3BEA3E3BEA3E3BEA3E3BEA3E4C0A6E9CDB9E4C0A6E3BEA3E3BEA3E3BEA3
+            E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3DEC1ABF2F2F1FDFDFD5454FDFDFDF0EEEC
+            E2C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE6C4ACEBD1
+            C0E6C6AFE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5
+            C3ABE5C3ABE5C3ABE5C3ABE5C3ABE6C5AEEBD1C0E6C5AEE5C3ABE5C3ABE5C3AB
+            E5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5D2C4F9F9F8FFFFFF5454FFFFFFFBFAFA
+            E9D8CBE6C8B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E8CAB5ECD5
+            C7E8CBB8E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7
+            C9B4E7C9B4E7C9B4E7C9B4E7C9B4E8CBB7ECD5C6E8CBB7E7C9B4E7C9B4E7C9B4
+            E7C9B4E7C9B4E7C9B4E7C9B4E6CBB7F1EAE5FFFFFFFFFFFF5454FFFFFFFFFFFF
+            F6F3F0EBD7C9EACEBCEACEBDEACEBDEACEBDEACEBDEACEBDEACEBDEBCFBEEED9
+            CCEBD1C0EACEBDEACEBDEACEBDEACEBDEACEBDEACEBDEACEBDEACEBDEACEBDEA
+            CEBDEACEBDEACEBDEACEBDEACEBDEBD0BFEED8CBEBD0BFEACEBDEACEBDEACEBD
+            EACEBDEACEBDEACEBDE9CEBDEFE3D9FCFBFBFFFFFFFFFFFF5454FFFFFFFFFFFF
+            FFFFFFF8F5F3EDDACEEBD3C4EDD4C5EDD4C5EDD4C5EDD4C5EDD4C5EDD4C6EED7
+            CAEDD4C6EDD4C5EDD4C5EDD4C5EDD4C5EDD4C5EDD4C5EDD4C5EDD4C5EDD4C5ED
+            D4C5EDD4C5EDD4C5EDD4C5EDD4C5EDD4C6EED7C9EDD4C6EDD4C5EDD4C5EDD4C5
+            EDD4C5EDD4C5EBD4C5F0E4DCFCFCFBFFFFFFFFFFFFFFFFFF5454FFFFFFFFFFFF
+            FFFFFFFFFFFFFDFCFBF6EFEAF0E2D7F0DFD4EFDED2EFDED2EFDED2EFDED2EFDE
+            D2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EF
+            DED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDFD3
+            F0DFD3F2E6DEFAF7F4FDFDFCFFFFFFFFFFFFFFFFFFFFFFFF5454FFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFBFAFAF8F4FAF7F3FAF7F3FAF7F3FAF7
+            F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FA
+            F7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FBF9F6
+            FDFDFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5454}
+          ParentDoubleBuffered = False
           ParentFont = False
-          RowLines = 2
           TabOrder = 0
-          OnCellClick = detailGridCellClick
-          Columns = <
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'ddID'
-              Footers = <>
-              Visible = False
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'DetID'
-              Footers = <>
-              Visible = False
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'det_count'
-              Font.Charset = RUSSIAN_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -16
-              Font.Name = 'Times New Roman'
-              Font.Style = [fsBold]
-              Footers = <>
-              Title.Caption = #1042#1099#1087#1086#1083#1085#1077#1085#1086', '#1077#1076
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clGreen
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = [fsBold, fsItalic]
-              Width = 146
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'date'
-              Font.Charset = RUSSIAN_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -16
-              Font.Name = 'Times New Roman'
-              Font.Style = [fsBold]
-              Footers = <>
-              ReadOnly = True
-              Title.Caption = #1044#1072#1090#1072
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clBlue
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = [fsBold]
-              Width = 148
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'engineer'
-              Font.Charset = RUSSIAN_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -16
-              Font.Name = 'Times New Roman'
-              Font.Style = [fsBold]
-              Footers = <>
-              Title.Caption = #1050#1090#1086' '#1074#1085#1077#1089' '#1076#1072#1085#1085#1099#1077
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clGreen
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = [fsBold, fsItalic]
-              Visible = False
-              Width = 255
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'comment'
-              Font.Charset = RUSSIAN_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -16
-              Font.Name = 'Times New Roman'
-              Font.Style = [fsBold]
-              Footers = <>
-              Title.Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clGreen
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = [fsBold, fsItalic]
-              Width = 531
-            end>
-          object RowDetailData: TRowDetailPanelControlEh
-          end
+          OnClick = diagramBtnClick
         end
-      end
-      object TabPhoto: TTabSheet
-        Caption = #1041#1072#1079#1072' '#1092#1086#1090#1086#1086#1090#1095#1077#1090#1086#1074' ('#1075#1072#1083#1077#1088#1077#1103')'
-        ImageIndex = 2
-        object photoGrid: TDBGridEh
-          Left = 0
+        object cleartnBtn: TBitBtn
+          Left = 227
           Top = 0
-          Width = 1164
-          Height = 379
-          Align = alClient
-          DataSource = photoDs
-          DynProps = <>
-          GridLineParams.DataVertColor = clBlack
-          GridLineParams.DataHorzColor = clBlack
-          GridLineParams.VertEmptySpaceStyle = dessNonEh
-          ImeMode = imDisable
-          IndicatorOptions = [gioShowRowIndicatorEh]
-          OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghColumnResize, dghColumnMove]
-          SearchPanel.Enabled = True
-          TabOrder = 0
-          OnCellClick = photoGridCellClick
-          OnDblClick = photoGridDblClick
-          Columns = <
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'DetID'
-              Footers = <>
-              Visible = False
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'phID'
-              Footers = <>
-              Visible = False
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'photo_name'
-              Footers = <>
-              Title.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1092#1086#1090#1086
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clGreen
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = [fsBold]
-              Width = 415
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'date'
-              Footers = <>
-              Title.Caption = #1044#1072#1090#1072' '#1089#1085#1080#1084#1082#1072
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clGreen
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = [fsBold]
-              Width = 116
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'path'
-              Footers = <>
-              Visible = False
-            end
-            item
-              DynProps = <>
-              EditButtons = <>
-              FieldName = 'comment'
-              Footers = <>
-              Title.Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-              Title.Font.Charset = RUSSIAN_CHARSET
-              Title.Font.Color = clGreen
-              Title.Font.Height = -16
-              Title.Font.Name = 'Times New Roman'
-              Title.Font.Style = [fsBold]
-              Width = 420
-            end>
-          object RowDetailData: TRowDetailPanelControlEh
-          end
+          Width = 182
+          Height = 47
+          Caption = #1059#1076#1072#1083#1080#1090#1100' '#1092#1072#1081#1083' '#1080#1079' '#1076#1072#1085#1085#1099#1093' '#1058#1053
+          DoubleBuffered = True
+          Font.Charset = RUSSIAN_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Kind = bkAbort
+          NumGlyphs = 2
+          ParentDoubleBuffered = False
+          ParentFont = False
+          TabOrder = 1
+          OnClick = cleartnBtnClick
+        end
+        object clearphBtn: TBitBtn
+          Left = 409
+          Top = 0
+          Width = 182
+          Height = 47
+          Caption = #1059#1076#1072#1083#1080#1090#1100' '#1092#1086#1090#1086' '#1080#1079' '#1075#1072#1083#1077#1088#1077#1080' '
+          DoubleBuffered = True
+          Font.Charset = RUSSIAN_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Kind = bkAbort
+          NumGlyphs = 2
+          ParentDoubleBuffered = False
+          ParentFont = False
+          TabOrder = 2
+          OnClick = clearphBtnClick
+        end
+        object clearsecBtn: TBitBtn
+          Left = 591
+          Top = 0
+          Width = 182
+          Height = 47
+          Caption = #1059#1076#1072#1083#1080#1090#1100' '#1092#1072#1081#1083' '#1080#1079' '#1088#1072#1079#1076#1077#1083#1072
+          DoubleBuffered = True
+          Font.Charset = RUSSIAN_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Times New Roman'
+          Font.Style = []
+          Kind = bkAbort
+          NumGlyphs = 2
+          ParentDoubleBuffered = False
+          ParentFont = False
+          TabOrder = 3
+          OnClick = clearsecBtnClick
         end
       end
-    end
-    object Panel1: TPanel
-      Left = 1
-      Top = 736
-      Width = 1172
-      Height = 55
-      Align = alClient
-      Caption = 'Panel1'
-      ShowCaption = False
-      TabOrder = 2
-      DesignSize = (
-        1172
-        55)
       object DBNavigator1: TDBNavigator
-        Left = 780
-        Top = 2
+        Left = 776
+        Top = 184
         Width = 240
         Height = 25
         DataSource = areaDs
         Anchors = []
-        TabOrder = 0
-        Visible = False
-      end
-      object diagramBtn: TBitBtn
-        Left = 4
-        Top = 2
-        Width = 217
-        Height = 47
-        Align = alCustom
-        Caption = #1044#1080#1072#1075#1088#1072#1084#1084#1099' '#1074#1099#1087#1086#1083#1085#1077#1085#1080#1103' '#1088#1072#1073#1086#1090
-        DoubleBuffered = True
-        Glyph.Data = {
-          B6140000424DB61400000000000036000000280000002A000000290000000100
-          1800000000008014000000000000000000000000000000000000FFFFFFFFFFFF
-          FFFFFFFFFFFFFDFDFDF7F7F8F2F2F2EDEDEDEBEBEBE9E9EAE9E9EAE9E9EAE9E9
-          EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9
-          E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAE9E9EAEBEBEB
-          EFEFEFF4F4F4F9F9F9FDFDFDFFFFFFFFFFFFFFFFFFFFFFFF5454FFFFFFFFFFFF
-          FFFFFFF9F9F9EDEDEDDFDFDFCFCFD0C6C5C6C3C2C3C1C1C1C1C1C1C1C1C1C1C1
-          C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1
-          C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C1C3C2C3
-          C8C8C9D4D4D5E6E6E6F4F4F4FDFDFDFFFFFFFFFFFFFFFFFF5454FFFFFFFFFFFF
-          F7F7F8E6E6E6C8C8C9BBB7AEBAAF90C2B286C3B283C3B283C3B283C3B283C3B2
-          83C3B283C3B283C3B283C3B283C3B283C3B283C3B283C3B283C3B283C2B183BC
-          AC80BFAF81C3B283C3B283C3B283C3B283C3B283C3B283C3B283C3B283C4B384
-          C0B28ABBB29BBFBDBCD4D4D5EFEFEFFBFBFBFFFFFFFFFFFF5454FFFFFFFBFBFB
-          E6E6E6C9C8C7C0B391D3B86FD5BE7BD5BB71E4C15FE5C25FE5C25FE4C25FE5C2
-          5FE5C25FE5C25FE5C25FE4C15FDEBD60E3C05FDEBC5FDDBC5FDBBA5FD8B85FCA
-          B886D0B979E4C15FE5C25FE5C25FE5C25FE5C25FE5C25FE5C25FE4C15FDEBC5D
-          D8B960D9BB63C8B379BAB4A6D7D6D7F0F0F1FDFDFDFFFFFF5454FDFDFDF0F0F1
-          CFCFCFD1CABCD8C593DCC997DDC481E5D8B3DFBD5DE4C15FE4C15FE4C15EE4C1
-          5FE4C15FE4C15FE4C15EE3C05ED7C490CBB26BD4C28ED8C695D6C599D1BB7EDF
-          D4B6EADFC3E3C05EE4C15FE4C15FE4C15EE4C15FE4C15FE4C15EE1BF60D5BF84
-          D1C194D2BB7DCFBF93C5B587C4BFB2DDDDDEF9F9F9FFFFFF5454F9F9F9E5E5E5
-          D0CABBE6D3A3E7D5A5EADEC0DCC993E8D9B1DFC374E3BF5DE3BF5DE3BF5DE3BF
-          5DE3BF5DE3BF5DE3BF5DE3BF5DE7D49FDBD0B3ECDBB0EBDDB8E6CF92E2D1A4DD
-          CEA6E8DBBBE2BF5DE3BF5DE3BF5DE3BF5DE3BF5DE3BF5DE3BF5DE1BF60D3BD80
-          D2C49FE2D1A5E7DEC7DED0A9DDD2B7D3D1D0F2F2F2FDFDFD5454F7F7F8DBDAD9
-          DCC892E7CA7FE6CB82ECDEBBE1C783E5C778E6CA7CE2BE5BE3BE5BE2BE5BE3BE
-          5BE3BE5BE3BE5BE3BE5BE3BE5BE6C97DE6DEC9E6C97BE9D08EE5C775E6C97CE7
-          D197E9D499E2BE5BE2BE5BE3BE5BE3BE5BE3BE5BE3BE5BE3BE5BE1BE5EE7D6AA
-          DBCFB1E0C784E7D093E6CB85E8D091D7CCB2ECECECFDFDFD5454F4F4F4DBD5C6
-          E5C369E4C060E4C060E7C672E4C062E4C060E4C060E4C05FE4C05FE4C05FE4C0
-          5FE4C05FE4C05FE4C05FE4C05FE5C164E8C978E4C061E4C061E4C060E4C060E4
-          C060E4C061E4C05FE4C05FE4C05FE4C05FE4C05FE4C05FE4C05FE4C060E5C369
-          E7C877E5C165E4C060E4C060E4C061DDC380E7E7E6FBFBFB5454F4F4F4DED3B7
-          E7C265E7C265E7C265E7C265E7C265E7C265E7C265E7C265E7C265E7C266E8C4
-          67E7C266E7C265E7C265E7C265E7C265E7C265E7C265E7C265E7C265E7C265E7
-          C265E7C265E7C265E7C265E7C265E7C266E8C467E7C266E7C265E7C265E7C265
-          E7C265E7C265E7C265E7C265E7C265E2C376E5E4E3FBFBFB5454F4F4F4DCCFB2
-          E0B859E0B859E1B859E1B859E0B859E0B859E0B859E0B859E1B859E1B859E5BD
-          5EE1B95AE1B859E0B859E1B859E0B859E1B859E1B859E0B859E1B859E0B859E0
-          B859E1B859E1B859E1B859E1B859E1B95AE5BD5EE1B85AE1B859E0B859E1B859
-          E0B859E1B859E1B859E1B859E1B859DEBA68E6E4E3FBFBFB5454F4F4F4DCCEB1
-          DFB455DFB455DFB455DFB455DFB455DFB455DFB455DFB455DFB455DFB555E4BB
-          5EE0B657DFB455DFB455DFB455DFB455DFB455DFB455DFB455DFB455DFB455DF
-          B455DFB455DFB455DFB455DFB455E0B556E4BB5EE0B556DFB455DFB455DFB455
-          DFB455DFB455DFB455DFB455DFB455DDB764E6E4E2FBFBFB5454F4F4F4DBCDB0
-          DEB153DEB153DEB153DEB153DEB153DEB153DEB153DEB153DEB153DEB153E4B9
-          5FDFB255DEB153DEB153DEB153DEB153DEB153DEB153DEB153DEB153DEB153DE
-          B153DEB153DEB153DEB153DEB153DFB254E4B95FDFB254DEB153DEB153DEB153
-          DEB153DEB153DEB153DEB153DEB153DCB462E5E4E2FBFBFB5454F4F4F4DBCCAF
-          DDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDEAE50E3B8
-          5FDFB052DDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDD
-          AE4FDDAE4FDDAE4FDDAE4FDDAE4FDEAF51E3B75FDEAF51DDAE4FDDAE4FDDAE4F
-          DDAE4FDDAE4FDDAE4FDDAE4FDDAE4FDBB15FE5E4E2FBFBFB5454F4F4F4DBCBAE
-          DCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDDAB4EE3B6
-          60DEAD51DCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDC
-          AA4DDCAA4DDCAA4DDCAA4DDCAA4DDDAC50E2B55FDDAC4FDCAA4DDCAA4DDCAA4D
-          DCAA4DDCAA4DDCAA4DDCAA4DDCAA4DDAAE5DE5E4E2FBFBFB5454F4F4F4DAC9AD
-          D9A447D9A447D9A447D9A447D9A447D9A447D9A447D9A447D9A447D9A548E1B2
-          5FDAA74BD9A447D9A447D9A447D9A447D9A447D9A447D9A447D9A447D9A447D9
-          A447D9A447D9A447D9A447D9A447DAA64AE0B25EDAA64AD9A447D9A447D9A447
-          D9A447D9A447D9A447D9A447D9A447D7A957E5E4E2FBFBFB5454F4F4F4D8C8AE
-          D49E4CD49F4CD49E4CD49E4CD49E4CD49E4CD49F4CD49F4CD49E4CD49F4EDEAF
-          63D6A251D49F4CD49F4CD49F4CD49F4CD49F4CD49E4CD49F4CD49F4CD49F4CD4
-          9F4CD49F4CD49F4CD49F4CD49F4CD5A150DDAF63D5A14FD49F4CD49E4CD49F4C
-          D49F4CD49F4CD49F4CD49F4CD49F4CD4A45DE5E4E2FBFBFB5454F4F4F4D8C7B2
-          D19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD29F5CDCAF
-          6ED3A15FD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD19D5BD1
-          9D5BD19D5BD19D5BD19D5BD19D5BD3A05EDCAF6ED3A05ED19D5BD19D5BD19D5B
-          D19D5BD19D5BD19D5BD19D5BD19D5BD1A369E5E4E3FBFBFB5454F4F4F4D7C5B3
-          CE995DCE995DCE9B5FCE9B60CE995DCE995DCE995DCE995DCE995DCE9A5FD9AD
-          71D09D61CE995DCE995DCE995DCE995DCE995DCE9A5ECE995ECE995DCE995DCE
-          995DCE995DCE995DCE995DCE995DCF9C60D9AC71CF9C60CE995DCE995DCE995D
-          CE995DCE995DCE995DCE995DCE995DCD9F6BE5E4E3FBFBFB5454F4F4F4D8C8B8
-          D3A675DAB58DE4C9ACE4C9ACD7AE81CB9559C99254C99254C99254CA9356D7A8
-          6ECC9759C99254C99254C99254CA9457D4A879E1C2A2DCB891CB955AC99254C9
-          9254C99254C99254C99254C99254CB9558D7A76DCB9558C99254C99254C99254
-          CB965BD5AA7CD2A472CA9355C99254CA9962E5E3E2FBFBFB5454F4F4F4E1D9D2
-          F0E1CEEAD3B8D9B27FDAB583F1E2D1DCB78BC9904AC98F49C98F49C9914BD6A7
-          6ACB9451C98F49C98F49C98F49D7AD7BF1E3D4E0C097EDDAC2E3C6A5CA9350C9
-          8F49C98F49C98F49C98F49C98F49CB934ED6A668CA934EC98F49C98F49CB9451
-          E6CBADF0E0CDF0E1D0D7AC7AC9904AC99659E5E3E2FBFBFB5454F4F4F4D4C0A5
-          C2821CBE7C10BE7B0EBE7C0FCD9A49F1E3D0D4A465CB9141CB9141CC9344DDB5
-          80E6CAA9D8AD74CB9243CD9549F1E1CFD6AB69BE7C0FC38623F1E2CEDBB480CB
-          9141CB9141CB9141CB9141CB9141CD9447D7A867CD9446CB9141CC9346E3C59E
-          E9D3B2C58927D6AD6BEEDBC4CD9547CA9753E5E3E2FBFBFB5454F4F4F4D2BC9A
-          BD7900BD7900BD7900BD7900BE7A03DBB579EAD3B5CE9648CC913ED29F58F2E3
-          D2E3C697F0E1CCD8AC70DEB986E9D2B0C18115BE7B08BE7B08D5A963F0DFCBCD
-          9443CC923FCC913FCC913ECC913ED7A96BF3E4D2E1BE91CC923FD6A869F1E2CD
-          C88E2BBD7900C58922EFDFC8D29F58CB9750E5E3E2FBFBFB5454F4F4F4D1BB96
-          BD7600BD7600BD7600BD7600BD7600C3841BEFDEC6D6A864CA8F35E1BE8CF1DE
-          CAC7892ED9AF78F2E5D2F4E7D7D6A974C58635C58637C58637CA904AF0DECCDB
-          B17ACF9851CF9850CF974FD19A55EDDAC1EDD6BCF3E5D3D3A157E7CCA8DDB87E
-          BE7804BD7600BE7A08E6CCA3DBB47BCA9548E5E3E2FBFBFB5454F4F4F4D1BA95
-          BC7400BC7400BC7400BC7400BC7502BE7A0EDCB680EAD3B5D4A263F2E3D3E5C4
-          A0CB914EC98D4AE1BF9AE5C8AACA8F4EC98C48C98C48C98C48C98C48DEBA92ED
-          D8C2D4A168D39F63D39F63DEB78CF2E5D6D9AA76E8CDB0EBD5B5F1E1CDCA903C
-          BD7606BC7400BC7400DAB275E6CAA2CA9547E5E3E2FBFBFB5454F4F4F4D1BA95
-          BC7200BC7200BD7404C27C1AC68632C98A3FD19C62F3E5D6ECD6BFEFDDCBDAAC
-          7ACE9353CB8E4BCB8F4CCC8F4DCB8E4BCB8E4BCB8E4BCB8E4BCB8E4BD0995FF5
-          E9DDD9AC79D39F63D39F64E7CAAAE9D0B6D8A772D8A978FAF5F0E7CBAECA8D47
-          C78738C48126BE770CCD9643EEDBBECB9546E5E3E1FBFBFB5454F4F4F4D1BA96
-          C07914C5832ECC8F4DCD9152CD9152CD9152CD9152DDB48BF1E0D0D8A979DAAA
-          79CF965ACD9152CD9152CD9152CD9152CD9152CD9152CD9152CD9152CE9255EF
-          DCC9E4C4A0D8A670D9AA76F2E2D2DDB58BD9A978CF9559D09960CE9255CD9152
-          CD9152CD9152CC9050CA8D46F2E4D4DFC19BE5E4E3FBFBFB5454F4F4F4D4C0A4
-          CD9253CE955BCE955BCE955BCE955BCE955BCE955BCF965ED29C68D0975FDBAE
-          80D19A63CE955BCE955BCE955BCE955BCE955BCE955BCE955BCE955BCF955CE3
-          C1A1EFDCC8DAAC78DEB385F4E8DCD8A97ADBAD7FD09861CE955BCE955BCE955B
-          CE955BCE955BCE955BCE955BE0BC99EDDFD2E6E5E5FBFBFB5454F4F4F4D4C1A9
-          D19A65D19A65D19A65D19A65D19A65D19A65D19A65D19A65D19A65D29B67DDB1
-          88D49F6CD19A65D19A65D19A65D19A65D19A65D19A65D19A65D19A65D19A65DA
-          AD83F4E8DDDDB284E7CAABEDD8C6D5A171DDB187D39D6AD19A65D19A65D19A65
-          D19A65D19A65D19A65D19A65D19A65D09F71E5E4E3FBFBFB5454F4F4F4D5C2AC
-          D49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED4A070DFB5
-          8FD6A375D49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED49E6ED5
-          A172ECD5C2F0DECDF4E8DCE0BA98D5A273DFB58ED5A273D49E6ED49E6ED49E6E
-          D49E6ED49E6ED49E6ED49E6ED49E6ED2A277E5E4E3FBFBFB5454F4F4F4D5C3AE
-          D6A377D6A377D6A377D6A377D6A377D6A377D6A377D6A377D6A377D7A479E0B9
-          96D8A77DD6A377D6A377D6A377D6A377D6A377D6A377D6A377D6A377D6A377D6
-          A377DAAC85EDD9C7E9CDB6D6A479D8A67CE0B895D8A67BD6A377D6A377D6A377
-          D6A377D6A377D6A377D6A377D6A377D4A680E5E4E3FBFBFB5454F4F4F4D6C4B0
-          D9A880D9A880D9A880D9A880D9A880D9A880D9A880D9A880D9A880D9A982E2BD
-          9DDAAC86D9A880D9A880D9A880D9A880D9A880D9A880D9A880D9A880D9A880D9
-          A880D9A880DAAA84D9A982D9A880DAAB84E2BC9DDAAB84D9A880D9A880D9A880
-          D9A880D9A880D9A880D9A880D9A880D5AA87E5E4E3FBFBFB5454F4F4F4D7C5B2
-          DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAE8AE4C1
-          A4DDB18EDBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DBAD88DB
-          AD88DBAD88DBAD88DBAD88DBAD88DCB08CE4C0A4DCB08CDBAD88DBAD88DBAD88
-          DBAD88DBAD88DBAD88DBAD88DBAD88D7AF8EE5E4E4FBFBFB5454F4F4F4D9C9B6
-          DEB391DEB391DEB391DEB391DEB391DEB391DEB391DEB391DEB391DEB493E6C5
-          ACDFB797DEB391DEB391DEB391DEB391DEB391DEB391DEB391DEB391DEB391DE
-          B391DEB391DEB391DEB391DEB391DFB695E5C4ABDFB695DEB391DEB391DEB391
-          DEB391DEB391DEB391DEB391DEB391DAB495E7E6E5FBFBFB5454F6F6F6DDCDBB
-          E0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B99BE7C9
-          B2E1BB9FE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0B89AE0
-          B89AE0B89AE0B89AE0B89AE0B89AE1BA9DE7C8B2E1BA9DE0B89AE0B89AE0B89A
-          E0B89AE0B89AE0B89AE0B89AE0B89ADDB99EECEBEBFDFDFD5454FBFBFBE6DCD3
-          E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BFA4E9CD
-          BAE4C1A7E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3E3
-          BEA3E3BEA3E3BEA3E3BEA3E3BEA3E4C0A6E9CDB9E4C0A6E3BEA3E3BEA3E3BEA3
-          E3BEA3E3BEA3E3BEA3E3BEA3E3BEA3DEC1ABF2F2F1FDFDFD5454FDFDFDF0EEEC
-          E2C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE6C4ACEBD1
-          C0E6C6AFE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5
-          C3ABE5C3ABE5C3ABE5C3ABE5C3ABE6C5AEEBD1C0E6C5AEE5C3ABE5C3ABE5C3AB
-          E5C3ABE5C3ABE5C3ABE5C3ABE5C3ABE5D2C4F9F9F8FFFFFF5454FFFFFFFBFAFA
-          E9D8CBE6C8B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E8CAB5ECD5
-          C7E8CBB8E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7C9B4E7
-          C9B4E7C9B4E7C9B4E7C9B4E7C9B4E8CBB7ECD5C6E8CBB7E7C9B4E7C9B4E7C9B4
-          E7C9B4E7C9B4E7C9B4E7C9B4E6CBB7F1EAE5FFFFFFFFFFFF5454FFFFFFFFFFFF
-          F6F3F0EBD7C9EACEBCEACEBDEACEBDEACEBDEACEBDEACEBDEACEBDEBCFBEEED9
-          CCEBD1C0EACEBDEACEBDEACEBDEACEBDEACEBDEACEBDEACEBDEACEBDEACEBDEA
-          CEBDEACEBDEACEBDEACEBDEACEBDEBD0BFEED8CBEBD0BFEACEBDEACEBDEACEBD
-          EACEBDEACEBDEACEBDE9CEBDEFE3D9FCFBFBFFFFFFFFFFFF5454FFFFFFFFFFFF
-          FFFFFFF8F5F3EDDACEEBD3C4EDD4C5EDD4C5EDD4C5EDD4C5EDD4C5EDD4C6EED7
-          CAEDD4C6EDD4C5EDD4C5EDD4C5EDD4C5EDD4C5EDD4C5EDD4C5EDD4C5EDD4C5ED
-          D4C5EDD4C5EDD4C5EDD4C5EDD4C5EDD4C6EED7C9EDD4C6EDD4C5EDD4C5EDD4C5
-          EDD4C5EDD4C5EBD4C5F0E4DCFCFCFBFFFFFFFFFFFFFFFFFF5454FFFFFFFFFFFF
-          FFFFFFFFFFFFFDFCFBF6EFEAF0E2D7F0DFD4EFDED2EFDED2EFDED2EFDED2EFDE
-          D2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EF
-          DED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDED2EFDFD3
-          F0DFD3F2E6DEFAF7F4FDFDFCFFFFFFFFFFFFFFFFFFFFFFFF5454FFFFFFFFFFFF
-          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFBFAFAF8F4FAF7F3FAF7F3FAF7F3FAF7
-          F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FA
-          F7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FAF7F3FBF9F6
-          FDFDFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5454}
-        ParentDoubleBuffered = False
-        TabOrder = 1
-        OnClick = diagramBtnClick
-      end
-      object cleartnBtn: TBitBtn
-        Left = 227
-        Top = 2
-        Width = 182
-        Height = 47
-        Caption = #1059#1076#1072#1083#1080#1090#1100' '#1092#1072#1081#1083' '#1080#1079' '#1076#1072#1085#1085#1099#1093' '#1058#1053
-        DoubleBuffered = True
-        Kind = bkAbort
-        NumGlyphs = 2
-        ParentDoubleBuffered = False
         TabOrder = 2
-        OnClick = cleartnBtnClick
-      end
-      object clearphBtn: TBitBtn
-        Left = 415
-        Top = 2
-        Width = 182
-        Height = 47
-        Caption = #1059#1076#1072#1083#1080#1090#1100' '#1092#1086#1090#1086' '#1080#1079' '#1075#1072#1083#1077#1088#1077#1080' '
-        DoubleBuffered = True
-        Kind = bkAbort
-        NumGlyphs = 2
-        ParentDoubleBuffered = False
-        TabOrder = 3
-        OnClick = clearphBtnClick
-      end
-      object clearsecBtn: TBitBtn
-        Left = 603
-        Top = 2
-        Width = 182
-        Height = 47
-        Caption = #1059#1076#1072#1083#1080#1090#1100' '#1092#1072#1081#1083' '#1080#1079' '#1088#1072#1079#1076#1077#1083#1072
-        DoubleBuffered = True
-        Kind = bkAbort
-        NumGlyphs = 2
-        ParentDoubleBuffered = False
-        TabOrder = 4
-        OnClick = clearsecBtnClick
+        Visible = False
       end
     end
   end
   object areaTable: TUniTable
     TableName = 'area'
     Connection = connection_module.connection
-    Left = 72
+    Left = 32
     Top = 584
     object areaTableID: TIntegerField
       FieldName = 'ID'
@@ -3050,11 +3130,11 @@ object tn_form: Ttn_form
   object sectionTable: TUniTable
     TableName = 'section'
     Connection = connection_module.connection
-    MasterSource = areaDs
-    MasterFields = 'ID'
+    MasterSource = main_secDs
+    MasterFields = 'msID'
     DetailFields = 'DetID'
     AfterPost = sectionTableAfterPost
-    Left = 176
+    Left = 184
     Top = 584
     object sectionTablesectID: TIntegerField
       FieldName = 'sectID'
@@ -3071,10 +3151,6 @@ object tn_form: Ttn_form
     end
     object sectionTableworking: TFloatField
       FieldName = 'working'
-    end
-    object sectionTablename_main: TStringField
-      FieldName = 'name_main'
-      Size = 250
     end
     object sectionTablepath: TStringField
       FieldName = 'path'
@@ -3130,7 +3206,7 @@ object tn_form: Ttn_form
   end
   object areaDs: TUniDataSource
     DataSet = areaTable
-    Left = 72
+    Left = 32
     Top = 648
   end
   object sectionDs: TUniDataSource
@@ -3192,7 +3268,7 @@ object tn_form: Ttn_form
         OnClick = N8Click
       end
       object xls1: TMenuItem
-        Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1076#1072#1085#1085#1099#1093' '#1090#1077#1093#1085#1072#1076#1079#1086#1088#1072' (*.xls)'
+        Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1076#1072#1085#1085#1099#1093' '#1090#1077#1093#1085#1072#1076#1079#1086#1088#1072' (Excel)'
         OnClick = xls1Click
       end
       object N9: TMenuItem
@@ -3220,10 +3296,6 @@ object tn_form: Ttn_form
     end
     object detailTabledate: TDateField
       FieldName = 'date'
-    end
-    object detailTableengineer: TStringField
-      FieldName = 'engineer'
-      Size = 150
     end
     object detailTabledet_count: TFloatField
       FieldName = 'det_count'
@@ -3282,17 +3354,52 @@ object tn_form: Ttn_form
   end
   object ADOCon: TADOConnection
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\yuriy\Desk' +
+      'Provider=Microsoft.Jet.OLEDB.8.0;Data Source=C:\Users\yuriy\Desk' +
       'top\temp\1.xls;Persist Security Info=False;'
     LoginPrompt = False
-    Provider = 'Microsoft.Jet.OLEDB.4.0'
-    Left = 624
-    Top = 120
+    Provider = 'Microsoft.Jet.OLEDB.8.0'
+    Left = 616
+    Top = 328
   end
   object TempTable: TADOTable
     Connection = ADOCon
     TableName = 'tab'
-    Left = 688
-    Top = 120
+    Left = 720
+    Top = 344
+  end
+  object main_secTable: TUniTable
+    TableName = 'main_section'
+    Connection = connection_module.connection
+    MasterSource = areaDs
+    MasterFields = 'ID'
+    DetailFields = 'DetID'
+    AfterPost = main_secTableAfterPost
+    Left = 104
+    Top = 584
+    object main_secTablemsID: TIntegerField
+      FieldName = 'msID'
+      ReadOnly = True
+      Required = True
+    end
+    object main_secTableDetID: TIntegerField
+      FieldName = 'DetID'
+      Required = True
+    end
+    object main_secTablename: TStringField
+      FieldName = 'name'
+      Size = 500
+    end
+    object main_secTableworking: TFloatField
+      FieldName = 'working'
+    end
+    object main_secTablepath: TStringField
+      FieldName = 'path'
+      Size = 500
+    end
+  end
+  object main_secDs: TUniDataSource
+    DataSet = main_secTable
+    Left = 104
+    Top = 648
   end
 end

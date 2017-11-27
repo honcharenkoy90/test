@@ -18,4 +18,14 @@
     <Transaction>1899.12.30 00:00:00.000.876,D:\доки\Delphi\програми\метро технагляд\title_unit.dfm=D:\доки\Delphi\програми\метро технагляд\tndata_unit.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.540,D:\доки\Delphi\програми\метро технагляд\title_unit.dfm=C:\Users\yuriy\Documents\RAD Studio\Projects\Unit7.dfm</Transaction>
   </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="connection_unit.pas"/>
+    <File Path="connection_unit.dfm"/>
+    <File Path="diagram_unit.pas"/>
+    <File Path="diagram_unit.dfm"/>
+    <File Path="report2.pas"/>
+    <File Path="report2.dfm"/>
+    <File Path="tndata_unit.pas"/>
+    <File Path="tndata_unit.dfm"/>
+  </ProjectSortOrder>
 </BorlandProject>

@@ -28,11 +28,9 @@ begin
 connection.ProviderName:='SQL Server';
 connection.LoginPrompt:=False;
 connection.Server:= 'METRO-SRV';
-//connection.Server:= 'DP-11-FSM\SQLEXPRESS';
 //Connection.Server:= 'INFINITI\SQLEXPRESS';
 connection.SpecificOptions.Values['Authentication']:='auWindows';
-connection.Database:='metro';
-//str:=UniConnection1.ConnectString;
+connection.Database:='metro_new';
 Connection.Connect;
 end;
 
