@@ -2170,7 +2170,7 @@ object tn_form: Ttn_form
     Top = 0
     Width = 1174
     Height = 793
-    ActivePage = TabNavi
+    ActivePage = TabData
     Align = alClient
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -2181,8 +2181,6 @@ object tn_form: Ttn_form
     TabOrder = 0
     object TabNavi: TTabSheet
       Caption = #1053#1072#1074#1080#1075#1072#1094#1080#1103' '#1087#1086' '#1091#1095#1072#1089#1090#1082#1072#1084
-      ExplicitTop = 24
-      ExplicitHeight = 765
       object GridPanel1: TGridPanel
         Left = 0
         Top = 0
@@ -2206,10 +2204,6 @@ object tn_form: Ttn_form
           end>
         ShowCaption = False
         TabOrder = 0
-        ExplicitLeft = 504
-        ExplicitTop = 372
-        ExplicitWidth = 662
-        ExplicitHeight = 393
         object GridPanel2: TGridPanel
           Left = 1
           Top = 1
@@ -2252,8 +2246,6 @@ object tn_form: Ttn_form
             end>
           ShowCaption = False
           TabOrder = 0
-          ExplicitWidth = 660
-          ExplicitHeight = 159
           object areaGrid: TDBGridEh
             Left = 1
             Top = 1
@@ -2509,8 +2501,6 @@ object tn_form: Ttn_form
     object TabData: TTabSheet
       Caption = #1044#1072#1085#1085#1099#1077' '#1058#1077#1093#1085#1072#1076#1079#1086#1088#1072
       ImageIndex = 1
-      ExplicitTop = 24
-      ExplicitHeight = 765
       DesignSize = (
         1166
         756)
@@ -2519,7 +2509,7 @@ object tn_form: Ttn_form
         Top = 53
         Width = 1166
         Height = 703
-        ActivePage = Tabsumma
+        ActivePage = TabDetail
         Align = alClient
         Font.Charset = RUSSIAN_CHARSET
         Font.Color = clWindowText
@@ -2528,11 +2518,8 @@ object tn_form: Ttn_form
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
-        ExplicitTop = 0
-        ExplicitHeight = 765
         object Tabsumma: TTabSheet
           Caption = #1057#1091#1084#1084#1072#1088#1085#1099#1077' '#1076#1072#1085#1085#1099#1077' '#1090#1077#1093#1085#1072#1076#1079#1086#1088#1072
-          ExplicitHeight = 731
           object dataGrid: TDBGridEh
             Left = 0
             Top = 0
@@ -2668,7 +2655,6 @@ object tn_form: Ttn_form
         object TabDetail: TTabSheet
           Caption = #1044#1077#1090#1072#1083#1080#1079#1080#1088#1086#1074#1072#1085#1085#1099#1077' '#1076#1072#1085#1085#1099#1077
           ImageIndex = 1
-          ExplicitHeight = 702
           object detailGrid: TDBGridEh
             Left = 0
             Top = 0
@@ -2735,7 +2721,6 @@ object tn_form: Ttn_form
                 Font.Name = 'Times New Roman'
                 Font.Style = [fsBold]
                 Footers = <>
-                ReadOnly = True
                 Title.Caption = #1044#1072#1090#1072
                 Title.Font.Charset = RUSSIAN_CHARSET
                 Title.Font.Color = clBlue
@@ -2769,7 +2754,6 @@ object tn_form: Ttn_form
         object TabPhoto: TTabSheet
           Caption = #1041#1072#1079#1072' '#1092#1086#1090#1086#1086#1090#1095#1077#1090#1086#1074' ('#1075#1072#1083#1077#1088#1077#1103')'
           ImageIndex = 2
-          ExplicitHeight = 702
           object photoGrid: TDBGridEh
             Left = 0
             Top = 0
@@ -3114,7 +3098,6 @@ object tn_form: Ttn_form
         Anchors = []
         TabOrder = 2
         Visible = False
-        ExplicitTop = 186
       end
     end
   end
